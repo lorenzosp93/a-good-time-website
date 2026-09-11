@@ -631,24 +631,3 @@ figcaption {
     scroll-behavior:auto;
   }
 }
-
-/* Motion is opt-in, with a static alternative for reduced-motion preferences. */
-.motion-player {
-  border: 0;
-  padding: 0;
-}
-.motion-player summary {
-  width: fit-content;
-  margin: 0 auto 1.25rem;
-  padding: .5rem 1rem;
-  border: 1px solid currentColor;
-  border-radius: 2rem;
-  font: inherit;
-  cursor: pointer;
-}
-.motion-player summary::after { content: none; }
-.motion-player .motion-pause,
-.motion-player[open] .motion-play { display: none; }
-.motion-player[open] .motion-pause { display: inline; }
-.motion-player[open] + .motion-poster { display: none; }
-.motion-player summary:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }

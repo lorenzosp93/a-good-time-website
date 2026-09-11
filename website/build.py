@@ -15,7 +15,7 @@ SCREENS = ("now", "capture", "focus", "controls")
 MOTION_SCREENS = ("focus",)
 
 def motion_screens(lang):
-    return ("capture", "focus") if lang == "en" else MOTION_SCREENS
+    return ("capture", "focus") if lang in ("en", "it") else MOTION_SCREENS
 
 
 
@@ -79,12 +79,9 @@ def render(lang, values, config, base):
         if story["screen"] not in motion_screens(lang):
             return poster
         animation = f'{e(base)}/assets/demos/{lang}-{story["screen"]}.gif'
-        return (f'<div class="motion"><details class="motion-player" open><summary>'
-                f'<span class="motion-play">{e(values["play_capture"] if story["screen"] == "capture" else values["play_animation"])}</span>'
-                f'<span class="motion-pause">{e(values["pause_animation"])}</span></summary>'
-                f'<div class="phone"><picture><source media="(prefers-reduced-motion: reduce)" srcset="{source}">'
+        return (f'<div class="phone"><picture><source media="(prefers-reduced-motion: reduce)" srcset="{source}">'
                 f'<img src="{animation}" alt="{e(values["capture_motion_alt"] if story["screen"] == "capture" else values["completion_alt"])}" width="1206" height="2622" '
-                f'loading="lazy" decoding="async"></picture></div></details>{poster}</div>')
+                f'loading="lazy" decoding="async"></picture></div>')
 
     data["stories"] = "".join(
         f'<article class="story-row"><figure class="story-image">{story_media(story)}'
