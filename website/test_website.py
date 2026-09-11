@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from urllib.parse import urlsplit, unquote
 
-from build import ROOT, LANGUAGES, SCREENS, build, load_content
+from build import ROOT, LANGUAGES, SCREENS, MOTION_SCREENS, build, load_content
 
 
 class Page(HTMLParser):
@@ -35,9 +35,12 @@ class WebsiteTests(unittest.TestCase):
                 elements = page.elements
                 self.assertEqual(next(attrs["lang"] for tag, attrs in elements if tag == "html"), language)
                 self.assertEqual(sum(tag == "h1" for tag, _ in elements), 1)
-                self.assertEqual(sum(tag == "details" for tag, _ in elements), 5)
+                self.assertEqual(sum(tag == "details" for tag, _ in elements), 5 + len(MOTION_SCREENS))
                 self.assertTrue(any(tag == "meta" and attrs.get("name") == "description" and attrs.get("content") for tag, attrs in elements))
                 self.assertEqual(sum(tag == "link" and attrs.get("rel") == "alternate" for tag, attrs in elements), 4)
+                self.assertTrue(any(tag == "a" and attrs.get("href") == "https://lorenzosp.com" for tag, attrs in elements))
+                self.assertTrue(any(tag == "source" and attrs.get("media") == "(prefers-reduced-motion: reduce)" for tag, attrs in elements))
+                self.assertFalse(any(tag == "details" and "open" in attrs for tag, attrs in elements))
                 ids = {attrs["id"] for _, attrs in elements if "id" in attrs}
                 for tag, attrs in elements:
                     self.assertNotIn(tag, ("script", "iframe", "form"))
@@ -75,6 +78,7 @@ class WebsiteTests(unittest.TestCase):
         expected = {"index.html", ".nojekyll", "assets/style.css", "assets/app-icon.png"}
         expected |= {f"{lang}/index.html" for lang in LANGUAGES}
         expected |= {f"assets/screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS}
+        expected |= {f"assets/demos/{lang}-{screen}.gif" for lang in LANGUAGES for screen in MOTION_SCREENS}
         actual = {str(path.relative_to(self.output)) for path in self.output.rglob("*") if path.is_file()}
         self.assertEqual(actual, expected)
 

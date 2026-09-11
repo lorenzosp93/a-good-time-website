@@ -12,6 +12,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent
 LANGUAGES = {"en": "English", "it": "Italiano", "es": "Español"}
 SCREENS = ("now", "capture", "focus", "controls")
+MOTION_SCREENS = ("focus",)
 
 
 def shape(value):
@@ -67,10 +68,22 @@ def render(lang, values, config, base):
     if config["testflight_url"]:
         data["closing_note"] = e(values["available_note"])
     data["principles"] = "".join(f"<span>{e(text)}</span>" for text in values["principles"])
+    def story_media(story):
+        source = f'{e(base)}/assets/screenshots/{lang}-{story["screen"]}.png'
+        poster = (f'<div class="phone motion-poster"><img src="{source}" '
+                  f'alt="{e(story["alt"])}" width="1206" height="2622" loading="lazy" decoding="async"></div>')
+        if story["screen"] not in MOTION_SCREENS:
+            return poster
+        animation = f'{e(base)}/assets/demos/{lang}-{story["screen"]}.gif'
+        return (f'<div class="motion"><details class="motion-player"><summary>'
+                f'<span class="motion-play">{e(values["play_animation"])}</span>'
+                f'<span class="motion-pause">{e(values["pause_animation"])}</span></summary>'
+                f'<div class="phone"><picture><source media="(prefers-reduced-motion: reduce)" srcset="{source}">'
+                f'<img src="{animation}" alt="{e(values["completion_alt"])}" width="1206" height="2622" '
+                f'loading="lazy" decoding="async"></picture></div></details>{poster}</div>')
+
     data["stories"] = "".join(
-        f'<article class="story-row"><figure class="story-image"><div class="phone">'
-        f'<img src="{e(base)}/assets/screenshots/{lang}-{story["screen"]}.png" '
-        f'alt="{e(story["alt"])}" width="1206" height="2622" loading="lazy" decoding="async"></div>'
+        f'<article class="story-row"><figure class="story-image">{story_media(story)}'
         f'<figcaption>{e(story["caption"])}</figcaption></figure><div class="story-copy">'
         f'<span class="step-number">0{index} /</span><h3>{e(story["title"])}</h3>'
         f'<p>{e(story["body"])}</p><p class="aside">{e(story["aside"])}</p></div></article>'
@@ -99,6 +112,7 @@ def build(output=None, config=None, base_path=None):
     content = load_content()
     # Explicit asset allowlist: no app sources, documents, test exports or personal data.
     assets = ["app-icon.png", "style.css"] + [f"screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS]
+    assets += [f"demos/{lang}-{screen}.gif" for lang in LANGUAGES for screen in MOTION_SCREENS]
     for asset in assets:
         if not (ROOT / "assets" / asset).is_file():
             raise FileNotFoundError(f"Missing public asset: {asset}")

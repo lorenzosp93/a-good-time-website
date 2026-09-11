@@ -3,89 +3,89 @@
   "description": "Sugerencias discretas que tienen en cuenta tu contexto para las cosas que quieres hacer. Para iPhone, con Recordatorios de Apple y datos en tu dispositivo.",
   "skip": "Ir al contenido",
   "language_label": "Idioma",
-  "eyebrow": "Un poco de espacio para lo que importa",
+  "eyebrow": "Tus tareas, cuando tienes tiempo.",
   "headline": "Haz espacio para eso que siempre dejas para luego.",
-  "intro": "Un capítulo de tu libro. Ese pequeño arreglo en casa. Un momento para ti. A Good Time te ayuda a encontrar algo de tu lista que encaje en el tiempo que tienes.",
+  "intro": "Tanto si quieres leer un capítulo como hacer algo en casa, A Good Time te propone tareas de tu lista según el tiempo que tienes y el lugar donde estás.",
   "cta_soon": "Próximamente en TestFlight",
   "cta_join": "Únete a la beta en TestFlight",
   "how_link": "Descubre cómo funciona",
   "hero_note": "Una primera beta para iPhone · iOS 18 o posterior",
   "now_alt": "La pantalla Ahora de A Good Time sugiere Leer un capítulo, con duración estimada, motivo y botón Iniciar.",
-  "hero_caption": "Algo que encaja. Y una razón para ello.",
+  "hero_caption": "Una sugerencia con una explicación de por qué encaja.",
   "principles_label": "Pensada para tu día",
   "principles": [
-    "Tu tiempo, tus decisiones",
-    "Sin rachas. Sin culpa.",
-    "Tu contexto personal se queda en tu dispositivo"
+    "Tú decides cuándo seguir una sugerencia.",
+    "No hay rachas que mantener.",
+    "Tu contexto personal se queda en tu dispositivo."
   ],
-  "story_eyebrow": "De querer hacerlo a encontrar un momento",
-  "story_title": "Buenas intenciones. Un buen momento.",
-  "story_intro": "Tu lista sabe qué quieres hacer. A Good Time te ayuda con la otra parte: cuándo podría encajar.",
+  "story_eyebrow": "Cómo funciona.",
+  "story_title": "Una lista que tiene en cuenta cuándo puedes usarla.",
+  "story_intro": "Además de lo que quieres hacer, la app considera cuánto tarda una tarea, dónde puedes hacerla y si tu calendario deja tiempo suficiente.",
   "stories": [
     {
       "screen": "capture",
-      "title": "Haz un hueco para las cosas que te importan.",
-      "body": "Añade una tarea o una actividad continua, cuánto tiempo necesita y dónde tiene sentido hacerla. Trae algo de Recordatorios de Apple o empieza con una idea nueva.",
-      "aside": "Una pequeña tarea, un proyecto personal o un capítulo cada vez. Todo tiene su sitio.",
+      "title": "Describe lo que quieres hacer.",
+      "body": "Escribe una tarea con tus propias palabras o usa el dictado del teclado. En un dispositivo compatible, la app puede rellenar detalles como la duración y el lugar, que puedes revisar y cambiar antes de guardar.",
+      "aside": "También puedes usar el formulario directamente o importar una tarea de Recordatorios de Apple.",
       "alt": "El editor real de la app con la tarea de ejemplo Leer un capítulo, tiempo estimado, lugar y esfuerzo.",
-      "caption": "Unos pocos detalles para encontrar un momento útil."
+      "caption": "Revisa los detalles antes de guardar."
     },
     {
       "screen": "focus",
-      "title": "Un pequeño avance también cuenta.",
-      "body": "Cuando algo encaje, inicia una sesión dedicada. Marca una tarea como hecha, registra avances en una actividad continua o para cuando lo necesites. Las Actividades en directo y Apple Watch mantienen lo esencial a mano.",
-      "aside": "También puedes preguntar qué encaja ahora, siempre que tengas un momento. No hace falta esperar una sugerencia.",
+      "title": "Empieza una tarea y registra lo que haces.",
+      "body": "Una sesión reúne la tarea y sus controles de finalización. Puedes marcarla como terminada, registrar avances en una actividad continua o parar y retomarla más tarde.",
+      "aside": "Si tienes un momento libre, puedes pedir una sugerencia sin esperar una notificación automática.",
       "alt": "Una sesión activa de Leer un capítulo, con controles para terminar o detener la actividad.",
-      "caption": "Una sola tarea, con libertad para parar."
+      "caption": "Completa una tarea o para cuando lo necesites."
     },
     {
       "screen": "controls",
-      "title": "Una ayuda, a tu manera.",
-      "body": "Elige tus horarios y un máximo de cero a cinco sugerencias automáticas al día. Cada sugerencia viene con un motivo. Pospónla, elige otra cosa o déjala para otro día.",
-      "aside": "El límite es un máximo, nunca una meta. A veces, lo más útil es el silencio.",
+      "title": "Elige cuándo recibir sugerencias.",
+      "body": "Configura tus horarios y un máximo de cero a cinco sugerencias automáticas al día. Cuando llegue una, puedes posponerla, elegir otra cosa o dejarla para otro día.",
+      "aside": "El máximo diario es un límite, por lo que la app puede enviar menos sugerencias si no encuentra una ocasión adecuada.",
       "alt": "Las preferencias de sugerencias muestran un máximo de dos al día y horarios para días laborables y fines de semana.",
-      "caption": "Tú decides cuánto espacio dar a las sugerencias."
+      "caption": "Configura los horarios y el máximo diario que prefieras."
     }
   ],
-  "connections_eyebrow": "Encaja en la vida que ya tienes",
-  "connections_title": "Un poco más de contexto. Una sugerencia más útil.",
-  "connections_intro": "Conecta solo lo que te ayude. La app acerca tus tareas a tus momentos libres, sin llenar el calendario de más citas.",
+  "connections_eyebrow": "Conexiones opcionales.",
+  "connections_title": "Usa el contexto que te resulte útil.",
+  "connections_intro": "Puedes conectar tu calendario, recordatorios y otras señales para obtener sugerencias más pertinentes, sin añadir citas al calendario.",
   "features": [
     [
-      "Tu calendario cuenta",
-      "Usa los calendarios que elijas para buscar tiempo libre entre tus compromisos. No conserva títulos, descripciones, asistentes ni ubicaciones de los eventos."
+      "Disponibilidad en el calendario.",
+      "Usa los calendarios seleccionados para encontrar tiempo libre entre tus compromisos. La app conserva intervalos libres y ocupados en lugar de títulos, descripciones, asistentes o ubicaciones de eventos."
     ],
     [
-      "Tus recordatorios, contigo",
-      "Activa recordatorios de Apple y mantén sincronizados los títulos, las fechas y el estado de las tareas vinculadas. Tu lista ya tiene un hogar."
+      "Recordatorios de Apple.",
+      "Activa recordatorios existentes de Apple para mantener sus títulos, fechas límite y estado de finalización sincronizados con las tareas que usas en A Good Time."
     ],
     [
-      "También el lugar adecuado",
-      "Elige dónde tiene sentido hacer una tarea. Las sugerencias opcionales al llegar pueden ayudarte a detectar un momento útil al alcanzar ese lugar."
+      "Lugares.",
+      "Elige dónde puedes hacer una tarea y, si activas las sugerencias al llegar, la app puede buscar una adecuada cuando llegues a ese lugar."
     ],
     [
-      "Un cambio de ritmo amable",
-      "Las sugerencias opcionales de Tiempo de uso pueden buscar una tarea después de un rato en las apps que elijas. Sin bloqueos, límites ni juicios."
+      "Tiempo de uso.",
+      "Después de pasar tiempo en las apps que elijas, una sugerencia opcional de Tiempo de uso puede proponerte una tarea sin bloquear esas apps ni imponer límites de uso."
     ],
     [
-      "Al alcance de tu muñeca",
-      "Con Apple Watch puedes preguntar qué encaja, iniciar una tarea y registrar avances o completarla. El iPhone conserva la lista y la lógica de las sugerencias."
+      "Apple Watch.",
+      "La app para Apple Watch permite pedir una sugerencia, empezar una tarea y registrar avances o su finalización, mientras el iPhone gestiona la lista y los horarios."
     ],
     [
-      "Descubre a qué dedicaste tiempo",
-      "Las sesiones y una reflexión semanal te ayudan a ver tus avances, sin rachas ni presión por acumular puntos."
+      "Progreso y reflexión.",
+      "Puedes revisar tus sesiones y el progreso semanal sin rachas ni una puntuación que mantener."
     ]
   ],
-  "privacy_eyebrow": "Lo personal sigue siendo personal",
-  "privacy_title": "Tu día sigue siendo tuyo.",
-  "privacy_intro": "A Good Time procesa las tareas y su contexto en tu dispositivo. Sin cuenta de A Good Time, analítica ni backend de la app.",
+  "privacy_eyebrow": "Privacidad.",
+  "privacy_title": "Tus tareas y tu disponibilidad se procesan en tu dispositivo.",
+  "privacy_intro": "A Good Time utiliza el contexto de tus tareas y tu tiempo de forma local, sin cuenta, analíticas ni un servidor de la app.",
   "privacy_points": [
     "El calendario sirve para obtener intervalos libres y ocupados, no para guardar una copia de tus eventos.",
     "Los lugares y Tiempo de uso son opcionales. Tú eliges qué permisos activar.",
     "Exportar datos es una decisión explícita, nunca una subida automática."
   ],
   "privacy_note": "Si conectas Recordatorios de Apple, los recordatorios siguen los ajustes de sincronización de la cuenta de Apple elegida. Este sitio no usa analítica ni cookies; GitHub proporciona el alojamiento.",
-  "faq_title": "Algunas cosas que conviene saber",
+  "faq_title": "Algunas cosas que conviene saber.",
   "faqs": [
     [
       "¿Puedo probarla ya?",
@@ -93,7 +93,7 @@
     ],
     [
       "¿Qué necesito?",
-      "Un iPhone con iOS 18 o posterior. La app está disponible en inglés, italiano y español. Apple Watch es un complemento opcional."
+      "Necesitas un iPhone con iOS 18 o posterior; la app admite inglés, italiano y español. El borrador automático de tareas requiere iOS 26 o posterior con Apple Intelligence disponible y activada. En otros dispositivos puedes usar el formulario, y Apple Watch es opcional."
     ],
     [
       "¿Tengo que activar todos los permisos?",
@@ -104,16 +104,19 @@
       "Busca momentos apropiados, pero las sugerencias dependen del contexto disponible y de la ejecución en segundo plano de iOS. No se garantiza un aviso. Siempre puedes abrir la app, elegir una tarea o pedir que compruebe qué encaja."
     ],
     [
-      "¿Es un método de productividad demostrado?",
-      "Es una primera beta que explora si elegir el momento con respeto puede ayudar con las tareas cotidianas. No afirma tener una eficacia demostrada. Un experimento personal independiente y opcional permite comparar distintos enfoques de temporización."
+      "¿Qué puedo esperar de la beta?",
+      "La app sigue en pruebas, por lo que puedes encontrar errores y cambios en el funcionamiento de las sugerencias. Si te interesa comparar distintos enfoques de horarios, también hay un experimento personal independiente y opcional en la app."
     ]
   ],
   "closing_eyebrow": "A Good Time · primera beta",
-  "closing_title": "Para las cosas a las que te gustaría dedicar tiempo.",
-  "closing_intro": "Un poco menos de decidir cuándo. Un poco más de espacio para empezar.",
+  "closing_title": "Prueba A Good Time.",
+  "closing_intro": "La beta está abierta si quieres ver cómo funcionan las sugerencias con tus tareas y tu rutina.",
   "closing_note": "El enlace de invitación aparecerá aquí cuando abra la beta.",
-  "footer": "Pensada para tus días.",
+  "footer": "Creado por",
   "privacy_link": "Privacidad",
   "available_note": "Usa TestFlight para instalar la beta en tu iPhone.",
-  "available_answer": "Sí. Usa el enlace de TestFlight de esta página para unirte a la beta. El acceso puede depender de las plazas disponibles."
+  "available_answer": "Sí. Usa el enlace de TestFlight de esta página para unirte a la beta. El acceso puede depender de las plazas disponibles.",
+  "play_animation": "Ver la animación de finalización",
+  "pause_animation": "Detener la animación",
+  "completion_alt": "Una tarea se marca como terminada y la app muestra la confirmación."
 }

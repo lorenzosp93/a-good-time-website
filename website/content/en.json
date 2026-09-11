@@ -3,89 +3,89 @@
   "description": "Gentle, context-aware suggestions for the things you keep meaning to do. Built for iPhone, with Apple Reminders, optional nudges, and on-device privacy.",
   "skip": "Skip to content",
   "language_label": "Language",
-  "eyebrow": "A little space for what matters",
+  "eyebrow": "Tasks, when you have time for them.",
   "headline": "Make room for the things you keep meaning to do.",
-  "intro": "A chapter of your book. That little job at home. A moment for yourself. A Good Time helps you find something from your list that fits the time you have.",
+  "intro": "Whether you want to read a chapter or get something done around the house, A Good Time suggests tasks from your list that fit your available time and where you are.",
   "cta_soon": "TestFlight coming soon",
   "cta_join": "Join the TestFlight beta",
   "how_link": "See how it works",
   "hero_note": "An early beta for iPhone · iOS 18 or later",
   "now_alt": "A Good Time’s Now screen suggesting Read a chapter, with its estimated time, a reason, and a Start button.",
-  "hero_caption": "One thing that fits. A reason why.",
+  "hero_caption": "A suggestion with an explanation of why it fits.",
   "principles_label": "Made with your day in mind",
   "principles": [
-    "Your time, your choice",
-    "No streaks. No guilt.",
-    "Personal context stays on your device"
+    "You decide when to act on a suggestion.",
+    "There are no streaks to maintain.",
+    "Your personal context stays on your device."
   ],
-  "story_eyebrow": "From meaning to do, to making a little time",
-  "story_title": "Good intentions. Meet a good moment.",
-  "story_intro": "Your list knows what you want to do. A Good Time helps with the other part: when it might fit.",
+  "story_eyebrow": "How it works.",
+  "story_title": "A task list that considers when you can use it.",
+  "story_intro": "Alongside what you want to do, the app considers how long a task takes, where you can do it, and whether your calendar leaves enough time.",
   "stories": [
     {
       "screen": "capture",
-      "title": "Give the things you care about a little space.",
-      "body": "Add a task or an ongoing activity, how long it needs, and where it makes sense. Bring in something from Apple Reminders, or start with a fresh thought.",
-      "aside": "A small chore, a personal project, or a chapter at a time. It all belongs here.",
+      "title": "Describe what you want to do.",
+      "body": "Write a task in your own words, or use keyboard dictation. On a supported device, the app can fill in details such as duration and place, which you can review and change before saving.",
+      "aside": "You can also use the form directly or bring in a task from Apple Reminders.",
       "alt": "The real task editor with the sample task Read a chapter, estimated completion time, place, and effort.",
-      "caption": "Add just enough detail to find a useful moment."
+      "caption": "Review the details before saving."
     },
     {
       "screen": "focus",
-      "title": "A little progress is still progress.",
-      "body": "When something fits, start a focused session. Mark a task done, record progress on an ongoing activity, or stop when you need to. Live Activities and Apple Watch keep the essentials close.",
-      "aside": "You can also ask what fits now, whenever you have a moment. No need to wait for a nudge.",
+      "title": "Start a task and record what you get done.",
+      "body": "A focused session keeps the task and its completion controls together. You can mark it done, record progress on an ongoing activity, or stop and return to it later.",
+      "aside": "If you have a free moment, you can ask for a suggestion without waiting for an automatic nudge.",
       "alt": "An active focus session for Read a chapter, showing the task and controls to finish or stop.",
-      "caption": "One task, with room to pause."
+      "caption": "Finish a task or stop when you need to."
     },
     {
       "screen": "controls",
-      "title": "Helpful, on your terms.",
-      "body": "Choose your welcome hours and a maximum of zero to five automatic suggestions a day. Every suggestion comes with a reason. Snooze it, choose something else, or leave it for another day.",
-      "aside": "The limit is a ceiling, never a target. Sometimes the most helpful thing is silence.",
+      "title": "Choose when suggestions are welcome.",
+      "body": "Set your welcome hours and a maximum of zero to five automatic suggestions a day. When a suggestion arrives, you can snooze it, choose something else, or leave it for another day.",
+      "aside": "The daily maximum is a limit, so the app may send fewer suggestions when there isn’t a suitable opportunity.",
       "alt": "The suggestion preferences screen showing a daily maximum of two suggestions and weekday and weekend welcome hours.",
-      "caption": "You decide how much space suggestions get."
+      "caption": "Set the hours and daily maximum that suit you."
     }
   ],
-  "connections_eyebrow": "Fits into the life you already have",
-  "connections_title": "A little more context. A more useful suggestion.",
-  "connections_intro": "Connect only what helps you. The app brings your tasks and your available moments together, without filling your calendar with more appointments.",
+  "connections_eyebrow": "Optional connections.",
+  "connections_title": "Use the context that helps you.",
+  "connections_intro": "You can connect your calendar, reminders, and other signals to make suggestions more relevant, without adding appointments to your calendar.",
   "features": [
     [
-      "Your calendar, considered",
-      "Use selected calendars to find free time around your commitments. Event titles, descriptions, attendees, and locations aren’t retained."
+      "Calendar availability.",
+      "Use selected calendars to find free time around your commitments. The app retains busy and free intervals rather than event titles, descriptions, attendees, or locations."
     ],
     [
-      "Your Reminders, brought along",
-      "Activate existing Apple Reminders and keep linked titles, due dates, and completion in sync. Your backlog already has a home."
+      "Apple Reminders.",
+      "Activate existing Apple Reminders so their titles, due dates, and completion stay in sync with the tasks you use in A Good Time."
     ],
     [
-      "The right place, too",
-      "Choose the places where a task makes sense. Optional arrival suggestions can help you notice a useful moment when you get there."
+      "Places.",
+      "Choose where a task can be done and, if you enable arrival suggestions, the app can check for a suitable task when you get there."
     ],
     [
-      "A gentler change of pace",
-      "Optional Screen Time nudges can check for a task after time in apps you choose. No blocking, limits, or judgment."
+      "Screen Time.",
+      "After you spend time in apps you choose, an optional Screen Time nudge can offer a task without blocking those apps or setting usage limits."
     ],
     [
-      "Within reach on your wrist",
-      "Use the Apple Watch companion to ask what fits, start a task, and record progress or completion. Your iPhone keeps the task list and timing logic."
+      "Apple Watch.",
+      "The Apple Watch companion lets you request a suggestion, start a task, and record progress or completion, while your iPhone manages the task list and timing."
     ],
     [
-      "Notice what you made time for",
-      "Focused sessions and a weekly reflection help you look back at your progress, without streaks or pressure to keep a score."
+      "Progress and reflection.",
+      "You can review your focused sessions and weekly progress without streaks or a score to maintain."
     ]
   ],
-  "privacy_eyebrow": "Personal means personal",
-  "privacy_title": "Your day stays yours.",
-  "privacy_intro": "A Good Time processes your task and timing context on your device. No A Good Time account, analytics, or app backend.",
+  "privacy_eyebrow": "Privacy.",
+  "privacy_title": "Your tasks and timing are processed on your device.",
+  "privacy_intro": "A Good Time uses your task and timing context locally, without an account, analytics, or an app backend.",
   "privacy_points": [
     "Calendar access is used for busy and free intervals, not a saved copy of your events.",
     "Places and Screen Time are optional. You choose which permissions to enable.",
     "Exporting app data is an explicit choice, never an automatic upload."
   ],
   "privacy_note": "If you connect Apple Reminders, linked reminders follow the sync settings of your chosen Apple account. This website uses no analytics or cookies; GitHub provides the hosting.",
-  "faq_title": "A few things to know",
+  "faq_title": "A few things to know.",
   "faqs": [
     [
       "Can I try it yet?",
@@ -93,7 +93,7 @@
     ],
     [
       "What do I need?",
-      "An iPhone running iOS 18 or later. The app supports English, Italian, and Spanish. Apple Watch is an optional companion."
+      "You need an iPhone running iOS 18 or later; the app supports English, Italian, and Spanish. Automatic task drafting requires iOS 26 or later with Apple Intelligence available and enabled. You can use the form on other devices, and Apple Watch is optional."
     ],
     [
       "Do I have to enable every permission?",
@@ -104,16 +104,19 @@
       "It aims to find suitable moments, but suggestions depend on available context and iOS background delivery. A nudge isn’t guaranteed. You can always open the app, choose a task, or ask it to check what fits."
     ],
     [
-      "Is this a proven productivity method?",
-      "It’s an early beta exploring whether respectful timing can help with everyday tasks. There are no proven effectiveness claims. A separate, optional personal experiment lets interested testers compare timing approaches."
+      "What should I expect from the beta?",
+      "The app is still being tested, so you may encounter bugs and changes to how suggestions work. If you’re interested in comparing timing approaches, there is also a separate, optional personal experiment in the app."
     ]
   ],
   "closing_eyebrow": "A Good Time · early beta",
-  "closing_title": "For the things you’d like to make time for.",
-  "closing_intro": "A little less deciding when. A little more room to begin.",
+  "closing_title": "Try A Good Time.",
+  "closing_intro": "The beta is open if you’d like to see how suggestions work with your own tasks and routine.",
   "closing_note": "The invitation link will appear here when the beta opens.",
-  "footer": "Made for the shape of your day.",
+  "footer": "Made by",
   "privacy_link": "Privacy",
   "available_note": "Use TestFlight to install the beta on your iPhone.",
-  "available_answer": "Yes. Use the TestFlight link on this page to join the beta. Availability may depend on open testing places."
+  "available_answer": "Yes. Use the TestFlight link on this page to join the beta. Availability may depend on open testing places.",
+  "play_animation": "Play completion animation",
+  "pause_animation": "Stop animation",
+  "completion_alt": "A task is marked done and the app shows its completion acknowledgement."
 }

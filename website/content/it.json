@@ -3,89 +3,89 @@
   "description": "Suggerimenti discreti, basati sul contesto, per le cose che vorresti fare. Per iPhone, con Promemoria Apple, suggerimenti facoltativi e dati sul dispositivo.",
   "skip": "Vai al contenuto",
   "language_label": "Lingua",
-  "eyebrow": "Un po’ di spazio per ciò che conta",
+  "eyebrow": "Le tue attività, quando hai tempo.",
   "headline": "Fai spazio alle cose che continui a rimandare.",
-  "intro": "Un capitolo del tuo libro. Quel lavoretto in casa. Un momento per te. A Good Time ti aiuta a trovare qualcosa dalla tua lista che si adatti al tempo che hai.",
+  "intro": "Che tu voglia leggere un capitolo o fare qualcosa in casa, A Good Time ti propone attività dalla tua lista in base al tempo che hai e a dove ti trovi.",
   "cta_soon": "Presto su TestFlight",
   "cta_join": "Partecipa alla beta su TestFlight",
   "how_link": "Scopri come funziona",
   "hero_note": "Una prima beta per iPhone · iOS 18 o successivo",
   "now_alt": "La schermata Ora di A Good Time suggerisce Leggere un capitolo, con durata stimata, motivazione e pulsante Inizia.",
-  "hero_caption": "Una cosa adatta al momento. E il perché.",
+  "hero_caption": "Una proposta e una spiegazione del perché è adatta al momento.",
   "principles_label": "Pensata per la tua giornata",
   "principles": [
-    "Il tuo tempo, le tue scelte",
-    "Niente serie. Niente sensi di colpa.",
-    "Il contesto personale resta sul dispositivo"
+    "Decidi tu quando seguire un suggerimento.",
+    "Non ci sono serie consecutive da mantenere.",
+    "Il tuo contesto personale resta sul dispositivo."
   ],
-  "story_eyebrow": "Dal voler fare al trovare un momento",
-  "story_title": "Buone intenzioni, al momento giusto.",
-  "story_intro": "La tua lista sa cosa vuoi fare. A Good Time ti aiuta con l’altra parte: trovare un momento in cui ci sia spazio.",
+  "story_eyebrow": "Come funziona.",
+  "story_title": "Una lista che tiene conto di quando puoi usarla.",
+  "story_intro": "Oltre a ciò che vuoi fare, l’app considera quanto tempo serve, dove puoi farlo e se il calendario lascia abbastanza spazio.",
   "stories": [
     {
       "screen": "capture",
-      "title": "Dai un po’ di spazio alle cose a cui tieni.",
-      "body": "Aggiungi un’attività singola o continuativa, il tempo che richiede e i luoghi in cui ha senso farla. Parti da Promemoria Apple o da una nuova idea.",
-      "aside": "Una piccola faccenda, un progetto personale o un capitolo alla volta. C’è posto per tutto.",
+      "title": "Descrivi ciò che vuoi fare.",
+      "body": "Scrivi un’attività con parole tue oppure usa la dettatura della tastiera. Su un dispositivo compatibile, l’app può compilare dettagli come durata e luogo, che puoi controllare e modificare prima di salvare.",
+      "aside": "Puoi anche usare direttamente il modulo o importare un’attività da Promemoria di Apple.",
       "alt": "L’editor dell’app con l’attività di esempio Leggere un capitolo, durata stimata, luogo e impegno.",
-      "caption": "Bastano pochi dettagli per trovare un momento utile."
+      "caption": "Controlla i dettagli prima di salvare."
     },
     {
       "screen": "focus",
-      "title": "Anche un piccolo passo è un progresso.",
-      "body": "Quando un’attività si adatta al momento, avvia una sessione dedicata. Segnala che hai finito, registra i progressi in un’attività continuativa o fermati quando serve. Attività in tempo reale e Apple Watch tengono l’essenziale a portata di mano.",
-      "aside": "Puoi anche chiedere cosa puoi fare ora, ogni volta che hai un momento. Non serve aspettare un suggerimento.",
+      "title": "Inizia un’attività e registra ciò che fai.",
+      "body": "Una sessione dedicata riunisce l’attività e i comandi per completarla. Puoi segnarla come conclusa, registrare i progressi di un’attività continuativa oppure fermarti e riprenderla più tardi.",
+      "aside": "Quando hai un momento libero, puoi chiedere un suggerimento senza aspettare una notifica automatica.",
       "alt": "Una sessione attiva per Leggere un capitolo, con i comandi per completare o interrompere l’attività.",
-      "caption": "Una sola attività, con la libertà di fermarti."
+      "caption": "Completa un’attività o fermati quando serve."
     },
     {
       "screen": "controls",
-      "title": "Un aiuto, alle tue condizioni.",
-      "body": "Scegli le fasce orarie e un massimo da zero a cinque suggerimenti automatici al giorno. Ogni suggerimento ha una motivazione. Rimandalo, scegli altro o lascia per un altro giorno.",
-      "aside": "Il limite è un massimo, mai un obiettivo. A volte la cosa più utile è il silenzio.",
+      "title": "Scegli quando ricevere suggerimenti.",
+      "body": "Imposta le fasce orarie e un massimo da zero a cinque suggerimenti automatici al giorno. Quando ne arriva uno, puoi rimandarlo, scegliere altro o lasciarlo per un altro giorno.",
+      "aside": "Il massimo giornaliero è un limite: l’app può inviare meno suggerimenti se non trova un’occasione adatta.",
       "alt": "Le preferenze dei suggerimenti mostrano un massimo di due al giorno e gli orari per giorni feriali e fine settimana.",
-      "caption": "Decidi tu quanto spazio dare ai suggerimenti."
+      "caption": "Imposta gli orari e il limite giornaliero che preferisci."
     }
   ],
-  "connections_eyebrow": "Si adatta alla vita che hai già",
-  "connections_title": "Un po’ più di contesto. Un suggerimento più utile.",
-  "connections_intro": "Collega solo ciò che ti serve. L’app avvicina le tue attività ai momenti liberi, senza riempire il calendario di altri appuntamenti.",
+  "connections_eyebrow": "Collegamenti facoltativi.",
+  "connections_title": "Usa il contesto che ti è utile.",
+  "connections_intro": "Puoi collegare calendario, promemoria e altri segnali per rendere i suggerimenti più pertinenti, senza aggiungere appuntamenti al calendario.",
   "features": [
     [
-      "Tiene conto del calendario",
-      "Usa i calendari selezionati per cercare tempo libero tra gli impegni. Non conserva titoli, descrizioni, partecipanti o luoghi degli eventi."
+      "Disponibilità nel calendario.",
+      "Usa i calendari selezionati per trovare tempo libero tra i tuoi impegni. L’app conserva intervalli liberi e occupati, anziché titoli, descrizioni, partecipanti o luoghi degli eventi."
     ],
     [
-      "Porta con te i tuoi promemoria",
-      "Attiva i promemoria esistenti di Apple e mantieni sincronizzati titoli, scadenze e completamento. La tua lista ha già una casa."
+      "Promemoria di Apple.",
+      "Attiva i promemoria esistenti di Apple per mantenerne titoli, scadenze e completamento sincronizzati con le attività che usi in A Good Time."
     ],
     [
-      "Anche il luogo conta",
-      "Scegli dove ha senso svolgere un’attività. I suggerimenti facoltativi all’arrivo possono aiutarti a cogliere un momento utile quando raggiungi quel posto."
+      "Luoghi.",
+      "Scegli dove puoi svolgere un’attività e, se abiliti i suggerimenti all’arrivo, l’app può cercarne una adatta quando raggiungi quel luogo."
     ],
     [
-      "Un cambio di ritmo gentile",
-      "I suggerimenti facoltativi di Tempo di utilizzo possono cercare un’attività dopo un po’ di tempo nelle app che scegli. Senza blocchi, limiti o giudizi."
+      "Tempo di utilizzo.",
+      "Dopo che trascorri del tempo nelle app che scegli, un suggerimento facoltativo di Tempo di utilizzo può proporti un’attività senza bloccare quelle app o imporre limiti di utilizzo."
     ],
     [
-      "A portata di polso",
-      "Con Apple Watch puoi chiedere cosa fare ora, iniziare un’attività e registrare progressi o completamento. Lista e logica dei suggerimenti restano su iPhone."
+      "Apple Watch.",
+      "L’app per Apple Watch permette di chiedere un suggerimento, iniziare un’attività e registrare progressi o completamento, mentre iPhone gestisce la lista e la tempistica."
     ],
     [
-      "Guarda a cosa hai dedicato tempo",
-      "Le sessioni e una riflessione settimanale ti aiutano a riconoscere i tuoi progressi, senza serie consecutive o pressioni per accumulare punti."
+      "Progressi e riflessione.",
+      "Puoi rivedere le sessioni e i progressi della settimana senza serie consecutive o un punteggio da mantenere."
     ]
   ],
-  "privacy_eyebrow": "Personale significa personale",
-  "privacy_title": "La tua giornata resta tua.",
-  "privacy_intro": "A Good Time elabora attività e contesto sul tuo dispositivo. Nessun account A Good Time, sistema di analisi o backend dell’app.",
+  "privacy_eyebrow": "Privacy.",
+  "privacy_title": "Attività e disponibilità vengono elaborate sul dispositivo.",
+  "privacy_intro": "A Good Time usa localmente il contesto delle tue attività e del tuo tempo, senza account, analisi di utilizzo o un backend dell’app.",
   "privacy_points": [
     "Il calendario serve a ricavare intervalli liberi e occupati, non a salvare una copia degli eventi.",
     "Luoghi e Tempo di utilizzo sono facoltativi. Scegli tu quali permessi concedere.",
     "L’esportazione dei dati è una scelta esplicita, mai un caricamento automatico."
   ],
   "privacy_note": "Se colleghi Promemoria Apple, i promemoria seguono le impostazioni di sincronizzazione dell’account Apple scelto. Questo sito non usa strumenti di analisi o cookie; è ospitato da GitHub.",
-  "faq_title": "Qualche informazione utile",
+  "faq_title": "Qualche informazione utile.",
   "faqs": [
     [
       "Posso già provarla?",
@@ -93,7 +93,7 @@
     ],
     [
       "Di cosa ho bisogno?",
-      "Un iPhone con iOS 18 o successivo. L’app è disponibile in inglese, italiano e spagnolo. Apple Watch è un complemento facoltativo."
+      "Serve un iPhone con iOS 18 o successivo; l’app supporta inglese, italiano e spagnolo. La compilazione automatica delle attività richiede iOS 26 o successivo con Apple Intelligence disponibile e attiva. Sugli altri dispositivi puoi usare il modulo, mentre Apple Watch è facoltativo."
     ],
     [
       "Devo concedere tutti i permessi?",
@@ -104,16 +104,19 @@
       "L’obiettivo è trovare momenti adatti, ma i suggerimenti dipendono dal contesto disponibile e dalla gestione in background di iOS. L’invio non è garantito. Puoi sempre aprire l’app, scegliere un’attività o chiedere di valutare cosa fare ora."
     ],
     [
-      "È un metodo di produttività dimostrato?",
-      "È una prima beta che esplora se suggerimenti rispettosi del tuo tempo possano aiutare con le attività quotidiane. Non promette un’efficacia dimostrata. Un esperimento personale separato e facoltativo permette di confrontare diversi approcci alla tempistica."
+      "Cosa posso aspettarmi dalla beta?",
+      "L’app è ancora in fase di test, quindi potresti incontrare errori e cambiamenti nel funzionamento dei suggerimenti. Se vuoi confrontare diversi approcci alla tempistica, nell’app trovi anche un esperimento personale separato e facoltativo."
     ]
   ],
   "closing_eyebrow": "A Good Time · prima beta",
-  "closing_title": "Per le cose a cui vorresti dedicare tempo.",
-  "closing_intro": "Un po’ meno tempo a decidere quando. Un po’ più di spazio per iniziare.",
+  "closing_title": "Prova A Good Time.",
+  "closing_intro": "La beta è aperta se vuoi vedere come funzionano i suggerimenti con le tue attività e la tua routine.",
   "closing_note": "Il link di invito apparirà qui quando aprirà la beta.",
-  "footer": "Pensata per le tue giornate.",
+  "footer": "Creato da",
   "privacy_link": "Privacy",
   "available_note": "Usa TestFlight per installare la beta sul tuo iPhone.",
-  "available_answer": "Sì. Usa il link TestFlight su questa pagina per partecipare alla beta. L’accesso può dipendere dai posti disponibili."
+  "available_answer": "Sì. Usa il link TestFlight su questa pagina per partecipare alla beta. L’accesso può dipendere dai posti disponibili.",
+  "play_animation": "Riproduci il completamento",
+  "pause_animation": "Ferma l’animazione",
+  "completion_alt": "Un’attività viene segnata come completata e l’app mostra la conferma."
 }
