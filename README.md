@@ -2,7 +2,7 @@
 
 The public landing page for A Good Time, in English, Italian, and Spanish.
 
-Live site: https://lorenzosp93.github.io/a-good-time-website/
+Live site: https://agoodtime.to/
 
 ## Develop
 
