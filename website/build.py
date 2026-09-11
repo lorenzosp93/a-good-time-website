@@ -14,6 +14,10 @@ LANGUAGES = {"en": "English", "it": "Italiano", "es": "Español"}
 SCREENS = ("now", "capture", "focus", "controls")
 MOTION_SCREENS = ("focus",)
 
+def motion_screens(lang):
+    return ("capture", "focus") if lang == "en" else MOTION_SCREENS
+
+
 
 def shape(value):
     if isinstance(value, dict):
@@ -72,14 +76,14 @@ def render(lang, values, config, base):
         source = f'{e(base)}/assets/screenshots/{lang}-{story["screen"]}.png'
         poster = (f'<div class="phone motion-poster"><img src="{source}" '
                   f'alt="{e(story["alt"])}" width="1206" height="2622" loading="lazy" decoding="async"></div>')
-        if story["screen"] not in MOTION_SCREENS:
+        if story["screen"] not in motion_screens(lang):
             return poster
         animation = f'{e(base)}/assets/demos/{lang}-{story["screen"]}.gif'
         return (f'<div class="motion"><details class="motion-player" open><summary>'
-                f'<span class="motion-play">{e(values["play_animation"])}</span>'
+                f'<span class="motion-play">{e(values["play_capture"] if story["screen"] == "capture" else values["play_animation"])}</span>'
                 f'<span class="motion-pause">{e(values["pause_animation"])}</span></summary>'
                 f'<div class="phone"><picture><source media="(prefers-reduced-motion: reduce)" srcset="{source}">'
-                f'<img src="{animation}" alt="{e(values["completion_alt"])}" width="1206" height="2622" '
+                f'<img src="{animation}" alt="{e(values["capture_motion_alt"] if story["screen"] == "capture" else values["completion_alt"])}" width="1206" height="2622" '
                 f'loading="lazy" decoding="async"></picture></div></details>{poster}</div>')
 
     data["stories"] = "".join(
@@ -112,7 +116,7 @@ def build(output=None, config=None, base_path=None):
     content = load_content()
     # Explicit asset allowlist: no app sources, documents, test exports or personal data.
     assets = ["app-icon.png", "style.css"] + [f"screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS]
-    assets += [f"demos/{lang}-{screen}.gif" for lang in LANGUAGES for screen in MOTION_SCREENS]
+    assets += [f"demos/{lang}-{screen}.gif" for lang in LANGUAGES for screen in motion_screens(lang)]
     for asset in assets:
         if not (ROOT / "assets" / asset).is_file():
             raise FileNotFoundError(f"Missing public asset: {asset}")

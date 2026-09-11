@@ -118,5 +118,7 @@
   "available_answer": "Yes. Use the TestFlight link on this page to join the beta. Availability may depend on open testing places.",
   "play_animation": "Play completion animation",
   "pause_animation": "Stop animation",
-  "completion_alt": "A task is marked done and the app shows its completion acknowledgement."
+  "completion_alt": "A task is marked done and the app shows its completion acknowledgement.",
+  "play_capture": "Replay task creation",
+  "capture_motion_alt": "A real iPhone recording showing keyboard dictation and an editable task draft filled from the description."
 }
