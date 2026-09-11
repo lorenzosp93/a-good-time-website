@@ -40,7 +40,7 @@ class WebsiteTests(unittest.TestCase):
                 self.assertEqual(sum(tag == "link" and attrs.get("rel") == "alternate" for tag, attrs in elements), 4)
                 self.assertTrue(any(tag == "a" and attrs.get("href") == "https://lorenzosp.com" for tag, attrs in elements))
                 self.assertTrue(any(tag == "source" and attrs.get("media") == "(prefers-reduced-motion: reduce)" for tag, attrs in elements))
-                self.assertFalse(any(tag == "details" and "open" in attrs for tag, attrs in elements))
+                self.assertEqual(sum(tag == "details" and "open" in attrs for tag, attrs in elements), len(MOTION_SCREENS))
                 ids = {attrs["id"] for _, attrs in elements if "id" in attrs}
                 for tag, attrs in elements:
                     self.assertNotIn(tag, ("script", "iframe", "form"))

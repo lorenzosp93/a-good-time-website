@@ -75,7 +75,7 @@ def render(lang, values, config, base):
         if story["screen"] not in MOTION_SCREENS:
             return poster
         animation = f'{e(base)}/assets/demos/{lang}-{story["screen"]}.gif'
-        return (f'<div class="motion"><details class="motion-player"><summary>'
+        return (f'<div class="motion"><details class="motion-player" open><summary>'
                 f'<span class="motion-play">{e(values["play_animation"])}</span>'
                 f'<span class="motion-pause">{e(values["pause_animation"])}</span></summary>'
                 f'<div class="phone"><picture><source media="(prefers-reduced-motion: reduce)" srcset="{source}">'

@@ -65,7 +65,7 @@
     ],
     [
       "Screen Time.",
-      "After you spend time in apps you choose, an optional Screen Time nudge can offer a task without blocking those apps or setting usage limits."
+      "Choose apps or app categories that you associate with procrastination. When you spend time in them, A Good Time may suggest something more constructive from your task list."
     ],
     [
       "Apple Watch.",
@@ -81,7 +81,7 @@
   "privacy_intro": "A Good Time uses your task and timing context locally, without an account, analytics, or an app backend.",
   "privacy_points": [
     "Calendar access is used for busy and free intervals, not a saved copy of your events.",
-    "Places and Screen Time are optional. You choose which permissions to enable.",
+    "Places and Screen Time are optional, so you choose which permissions to enable.",
     "Exporting app data is an explicit choice, never an automatic upload."
   ],
   "privacy_note": "If you connect Apple Reminders, linked reminders follow the sync settings of your chosen Apple account. This website uses no analytics or cookies; GitHub provides the hosting.",

@@ -65,7 +65,7 @@
     ],
     [
       "Tiempo de uso.",
-      "Después de pasar tiempo en las apps que elijas, una sugerencia opcional de Tiempo de uso puede proponerte una tarea sin bloquear esas apps ni imponer límites de uso."
+      "Elige apps o categorías de apps que asocies con la procrastinación. Cuando pases tiempo en ellas, A Good Time puede sugerirte algo más constructivo de tu lista de tareas."
     ],
     [
       "Apple Watch.",
@@ -81,7 +81,7 @@
   "privacy_intro": "A Good Time utiliza el contexto de tus tareas y tu tiempo de forma local, sin cuenta, analíticas ni un servidor de la app.",
   "privacy_points": [
     "El calendario sirve para obtener intervalos libres y ocupados, no para guardar una copia de tus eventos.",
-    "Los lugares y Tiempo de uso son opcionales. Tú eliges qué permisos activar.",
+    "Lugares y Tiempo de uso son opcionales, por lo que tú eliges qué permisos activar.",
     "Exportar datos es una decisión explícita, nunca una subida automática."
   ],
   "privacy_note": "Si conectas Recordatorios de Apple, los recordatorios siguen los ajustes de sincronización de la cuenta de Apple elegida. Este sitio no usa analítica ni cookies; GitHub proporciona el alojamiento.",

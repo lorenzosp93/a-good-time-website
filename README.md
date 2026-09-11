@@ -26,4 +26,4 @@ cookies, or email collection.
 
 Screenshots show the actual app using synthetic sample data. Capture tooling
 is maintained with the app; this repository contains the reviewed public PNGs and completion GIFs.
-Animations have a play/stop control and a static reduced-motion alternative.
+Animations autoplay with a stop/replay control and a static reduced-motion alternative.
