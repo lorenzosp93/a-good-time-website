@@ -35,8 +35,8 @@
       "title": "Inizia un’attività e registra ciò che fai.",
       "body": "Una sessione dedicata riunisce l’attività e i comandi per completarla. Puoi segnarla come conclusa, registrare i progressi di un’attività continuativa oppure fermarti e riprenderla più tardi.",
       "aside": "Quando hai un momento libero, puoi chiedere un suggerimento senza aspettare una notifica automatica.",
-      "alt": "Una sessione attiva per Leggere un capitolo, con i comandi per completare o interrompere l’attività.",
-      "caption": "Completa un’attività o fermati quando serve."
+      "alt": "L’attività di esempio Fare stretching alle spalle è in corso, con i comandi per completarla o interromperla.",
+      "caption": "Dalla notifica al completamento dell’attività."
     },
     {
       "screen": "controls",
@@ -116,7 +116,7 @@
   "privacy_link": "Privacy",
   "available_note": "Usa TestFlight per installare la beta sul tuo iPhone.",
   "available_answer": "Sì. Usa il link TestFlight su questa pagina per partecipare alla beta. L’accesso può dipendere dai posti disponibili.",
-  "completion_alt": "Un’attività viene segnata come completata e l’app mostra la conferma.",
+  "completion_alt": "Arriva un suggerimento di esempio: si legge il motivo, si accetta l’attività, la si vede come Attività in tempo reale, poi la si riapre e completa.",
   "capture_motion_alt": "Una registrazione reale su iPhone mostra la dettatura e una bozza modificabile compilata dalla descrizione.",
   "play_demo": "Riproduci animazione",
   "replay_demo": "Rivedi"

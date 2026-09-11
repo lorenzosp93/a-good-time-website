@@ -35,8 +35,8 @@
       "title": "Start a task and record what you get done.",
       "body": "A focused session keeps the task and its completion controls together. You can mark it done, record progress on an ongoing activity, or stop and return to it later.",
       "aside": "If you have a free moment, you can ask for a suggestion without waiting for an automatic nudge.",
-      "alt": "An active focus session for Read a chapter, showing the task and controls to finish or stop.",
-      "caption": "Finish a task or stop when you need to."
+      "alt": "The practice task Stretch your shoulders is in progress, with controls to finish or stop.",
+      "caption": "From the notification to a finished task."
     },
     {
       "screen": "controls",
@@ -116,7 +116,7 @@
   "privacy_link": "Privacy",
   "available_note": "Use TestFlight to install the beta on your iPhone.",
   "available_answer": "Yes. Use the TestFlight link on this page to join the beta. Availability may depend on open testing places.",
-  "completion_alt": "A task is marked done and the app shows its completion acknowledgement.",
+  "completion_alt": "A practice nudge arrives, its reason is reviewed, and the task is accepted, shown as a Live Activity, reopened and completed.",
   "capture_motion_alt": "A real iPhone recording showing keyboard dictation and an editable task draft filled from the description.",
   "play_demo": "Play animation",
   "replay_demo": "Replay"

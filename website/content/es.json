@@ -35,8 +35,8 @@
       "title": "Empieza una tarea y registra lo que haces.",
       "body": "Una sesión reúne la tarea y sus controles de finalización. Puedes marcarla como terminada, registrar avances en una actividad continua o parar y retomarla más tarde.",
       "aside": "Si tienes un momento libre, puedes pedir una sugerencia sin esperar una notificación automática.",
-      "alt": "Una sesión activa de Leer un capítulo, con controles para terminar o detener la actividad.",
-      "caption": "Completa una tarea o para cuando lo necesites."
+      "alt": "La tarea de ejemplo Estirar los hombros está en curso, con controles para completarla o detenerla.",
+      "caption": "De la notificación a la tarea completada."
     },
     {
       "screen": "controls",
@@ -116,7 +116,7 @@
   "privacy_link": "Privacidad",
   "available_note": "Usa TestFlight para instalar la beta en tu iPhone.",
   "available_answer": "Sí. Usa el enlace de TestFlight de esta página para unirte a la beta. El acceso puede depender de las plazas disponibles.",
-  "completion_alt": "Una tarea se marca como terminada y la app muestra la confirmación.",
+  "completion_alt": "Llega una sugerencia de ejemplo: se revisa el motivo, se acepta la tarea, aparece como Actividad en directo y se vuelve a abrir para completarla.",
   "capture_motion_alt": "Una grabación real en iPhone muestra el dictado y un borrador editable rellenado a partir de la descripción.",
   "play_demo": "Reproducir animación",
   "replay_demo": "Volver a ver"
