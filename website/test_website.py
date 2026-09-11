@@ -39,11 +39,12 @@ class WebsiteTests(unittest.TestCase):
                 self.assertTrue(any(tag == "meta" and attrs.get("name") == "description" and attrs.get("content") for tag, attrs in elements))
                 self.assertEqual(sum(tag == "link" and attrs.get("rel") == "alternate" for tag, attrs in elements), 4)
                 self.assertTrue(any(tag == "a" and attrs.get("href") == "https://lorenzosp.com" for tag, attrs in elements))
-                self.assertTrue(any(tag == "source" and attrs.get("media") == "(prefers-reduced-motion: reduce)" for tag, attrs in elements))
+                self.assertEqual(sum(tag == "video" for tag, _ in elements), len(motion_screens(language)))
+                self.assertTrue(all("loop" not in attrs and "autoplay" not in attrs for tag, attrs in elements if tag == "video"))
                 self.assertFalse(any(tag == "details" and "open" in attrs for tag, attrs in elements))
                 ids = {attrs["id"] for _, attrs in elements if "id" in attrs}
                 for tag, attrs in elements:
-                    self.assertNotIn(tag, ("script", "iframe", "form"))
+                    self.assertNotIn(tag, ("iframe", "form"))
                     if tag == "img":
                         self.assertIn("alt", attrs)
                         self.assertIn("width", attrs)
@@ -55,7 +56,7 @@ class WebsiteTests(unittest.TestCase):
                         else:
                             self.assertIn("disabled", attrs)
                             self.assertNotIn("href", attrs)
-                    for attribute in ("href", "src"):
+                    for attribute in ("href", "src", "poster", "data-src"):
                         if attribute not in attrs:
                             continue
                         url = urlsplit(attrs[attribute])
@@ -75,10 +76,10 @@ class WebsiteTests(unittest.TestCase):
                 if enabled:
                     self.assertNotIn(copy["cta_soon"], text)
                     self.assertNotIn(copy["closing_note"], text)
-        expected = {"index.html", ".nojekyll", "assets/style.css", "assets/app-icon.png"}
+        expected = {"index.html", ".nojekyll", "assets/style.css", "assets/motion.js", "assets/app-icon.png"}
         expected |= {f"{lang}/index.html" for lang in LANGUAGES}
         expected |= {f"assets/screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS}
-        expected |= {f"assets/demos/{lang}-{screen}.gif" for lang in LANGUAGES for screen in motion_screens(lang)}
+        expected |= {f"assets/demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)}
         actual = {str(path.relative_to(self.output)) for path in self.output.rglob("*") if path.is_file()}
         self.assertEqual(actual, expected)
 

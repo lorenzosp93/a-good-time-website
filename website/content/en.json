@@ -117,5 +117,7 @@
   "available_note": "Use TestFlight to install the beta on your iPhone.",
   "available_answer": "Yes. Use the TestFlight link on this page to join the beta. Availability may depend on open testing places.",
   "completion_alt": "A task is marked done and the app shows its completion acknowledgement.",
-  "capture_motion_alt": "A real iPhone recording showing keyboard dictation and an editable task draft filled from the description."
+  "capture_motion_alt": "A real iPhone recording showing keyboard dictation and an editable task draft filled from the description.",
+  "play_demo": "Play animation",
+  "replay_demo": "Replay"
 }

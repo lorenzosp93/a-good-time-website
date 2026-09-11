@@ -15,7 +15,7 @@ SCREENS = ("now", "capture", "focus", "controls")
 MOTION_SCREENS = ("focus",)
 
 def motion_screens(lang):
-    return ("capture", "focus") if lang in ("en", "it") else MOTION_SCREENS
+    return ("capture", "focus")
 
 
 
@@ -78,10 +78,12 @@ def render(lang, values, config, base):
                   f'alt="{e(story["alt"])}" width="1206" height="2622" loading="lazy" decoding="async"></div>')
         if story["screen"] not in motion_screens(lang):
             return poster
-        animation = f'{e(base)}/assets/demos/{lang}-{story["screen"]}.gif'
-        return (f'<div class="phone"><picture><source media="(prefers-reduced-motion: reduce)" srcset="{source}">'
-                f'<img src="{animation}" alt="{e(values["capture_motion_alt"] if story["screen"] == "capture" else values["completion_alt"])}" width="1206" height="2622" '
-                f'loading="lazy" decoding="async"></picture></div>')
+        animation = f'{e(base)}/assets/demos/{lang}-{story["screen"]}.mp4'
+        return (f'<div class="phone demo"><video muted playsinline preload="none" poster="{source}" '
+                f'aria-label="{e(values["capture_motion_alt"] if story["screen"] == "capture" else values["completion_alt"])}" '
+                f'width="1206" height="2622" data-src="{animation}"></video>'
+                f'<button class="demo-replay" type="button" hidden data-play="{e(values["play_demo"])}" '
+                f'data-replay="{e(values["replay_demo"])}">{e(values["replay_demo"])}</button></div>')
 
     data["stories"] = "".join(
         f'<article class="story-row"><figure class="story-image">{story_media(story)}'
@@ -112,8 +114,8 @@ def build(output=None, config=None, base_path=None):
         raise ValueError("base path must contain only URL path segments")
     content = load_content()
     # Explicit asset allowlist: no app sources, documents, test exports or personal data.
-    assets = ["app-icon.png", "style.css"] + [f"screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS]
-    assets += [f"demos/{lang}-{screen}.gif" for lang in LANGUAGES for screen in motion_screens(lang)]
+    assets = ["app-icon.png", "style.css", "motion.js"] + [f"screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS]
+    assets += [f"demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)]
     for asset in assets:
         if not (ROOT / "assets" / asset).is_file():
             raise FileNotFoundError(f"Missing public asset: {asset}")

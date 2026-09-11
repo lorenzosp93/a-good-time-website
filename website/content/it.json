@@ -117,5 +117,7 @@
   "available_note": "Usa TestFlight per installare la beta sul tuo iPhone.",
   "available_answer": "Sì. Usa il link TestFlight su questa pagina per partecipare alla beta. L’accesso può dipendere dai posti disponibili.",
   "completion_alt": "Un’attività viene segnata come completata e l’app mostra la conferma.",
-  "capture_motion_alt": "Una registrazione reale su iPhone mostra la dettatura e una bozza modificabile compilata dalla descrizione."
+  "capture_motion_alt": "Una registrazione reale su iPhone mostra la dettatura e una bozza modificabile compilata dalla descrizione.",
+  "play_demo": "Riproduci animazione",
+  "replay_demo": "Rivedi"
 }

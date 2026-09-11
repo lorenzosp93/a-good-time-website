@@ -25,6 +25,8 @@ jobs:
           python-version: '3.12'
       - name: Validate all languages and both TestFlight states
         run: python3 -m unittest discover -s website -p 'test_*.py' -v
+      - name: Validate demo playback
+        run: node website/test_motion.cjs
       - name: Build static website
         run: python3 website/build.py
       - name: Upload public website only

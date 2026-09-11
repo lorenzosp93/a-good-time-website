@@ -631,3 +631,13 @@ figcaption {
     scroll-behavior:auto;
   }
 }
+
+.demo { position: relative; }
+.demo video { display: block; width: 100%; height: auto; }
+.demo-replay {
+  position: absolute; left: 50%; bottom: 12%; transform: translateX(-50%);
+  padding: .7rem 1.2rem; border: 1px solid #f8f6ed; border-radius: 999px;
+  background: #244b39; color: #fff; font: inherit; font-weight: 600;
+  cursor: pointer; box-shadow: 0 3px 18px #0003; white-space: nowrap;
+}
+.demo-replay[hidden] { display: none; }
