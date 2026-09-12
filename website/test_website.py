@@ -77,13 +77,26 @@ class WebsiteTests(unittest.TestCase):
                 if enabled:
                     self.assertNotIn(copy["cta_soon"], text)
                     self.assertNotIn(copy["closing_note"], text)
-        expected = {"index.html", ".nojekyll", "assets/style.css", "assets/motion.js", "assets/app-icon.png"}
+        expected = {"index.html", ".nojekyll", "assets/style.css", "assets/motion.js", "assets/app-icon-small.png"}
         expected |= {f"{lang}/index.html" for lang in LANGUAGES}
-        expected |= {f"assets/screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS}
+        expected |= {f"assets/screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS}
         expected |= {f"assets/demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)}
         expected |= {"assets/support.js", "support/index.html"} | {f"{lang}/support/index.html" for lang in LANGUAGES}
         actual = {str(path.relative_to(self.output)) for path in self.output.rglob("*") if path.is_file()}
         self.assertEqual(actual, expected)
+
+    def test_performance_and_canonical_contracts(self):
+        build(self.output, config=self.config)
+        for route in ("", "en/", "it/", "es/", "support/", "en/support/", "it/support/", "es/support/"):
+            elements = Page((self.output / route / "index.html").read_text()).elements
+            canonical = next(a["href"] for t, a in elements if t == "link" and a.get("rel") == "canonical")
+            alternates = {a["href"] for t, a in elements if t == "link" and a.get("rel") == "alternate"}
+            current = self.config["site_url"] + "/" + route
+            self.assertFalse(current in alternates and canonical in alternates and current != canonical)
+            self.assertFalse(any(t == "link" and a.get("rel") == "stylesheet" for t, a in elements))
+        self.assertLess((self.output / "assets/app-icon-small.png").stat().st_size, 15000)
+        for image in (self.output / "assets/screenshots").glob("*.webp"):
+            self.assertLess(image.stat().st_size, 100000)
 
     def test_support_routes_forms_and_email_fallbacks(self):
         for base in ("", "/a-good-time-website"):

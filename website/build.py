@@ -54,11 +54,12 @@ def render(lang, values, config, base):
     e = escape
     data = {key: e(value) for key, value in values.items() if isinstance(value, str)}
     site = config["site_url"].rstrip("/")
+    data["styles"] = (ROOT / "assets/style.css").read_text()
     data.update(lang=lang, base=e(base), canonical=e(f"{site}/{lang}/"))
     data["alternates"] = "\n  ".join(
         f'<link rel="alternate" hreflang="{language}" href="{e(site)}/{language}/">'
         for language in LANGUAGES
-    ) + f'\n  <link rel="alternate" hreflang="x-default" href="{e(site)}/">'
+    ) + f'\n  <link rel="alternate" hreflang="x-default" href="{e(site)}/en/">'
     data["languages"] = "".join(
         f'<a href="{e(base)}/{language}/" lang="{language}" hreflang="{language}"'
         f' aria-label="{name}"' + (' aria-current="page"' if language == lang else '')
@@ -74,7 +75,7 @@ def render(lang, values, config, base):
         data["closing_note"] = e(values["available_note"])
     data["principles"] = "".join(f"<span>{e(text)}</span>" for text in values["principles"])
     def story_media(story):
-        source = f'{e(base)}/assets/screenshots/{lang}-{story["screen"]}.png'
+        source = f'{e(base)}/assets/screenshots/{lang}-{story["screen"]}.webp'
         poster = (f'<div class="phone motion-poster"><img src="{source}" '
                   f'alt="{e(story["alt"])}" width="1206" height="2622" loading="lazy" decoding="async"></div>')
         if story["screen"] not in motion_screens(lang):
@@ -116,7 +117,7 @@ def build(output=None, config=None, base_path=None):
     content = load_content()
     support_content = load_support()
     # Explicit asset allowlist: no app sources, documents, test exports or personal data.
-    assets = ["app-icon.png", "style.css", "motion.js", "support.js"] + [f"screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS]
+    assets = ["app-icon-small.png", "style.css", "motion.js", "support.js"] + [f"screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS]
     assets += [f"demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)]
     for asset in assets:
         if not (ROOT / "assets" / asset).is_file():
@@ -124,8 +125,11 @@ def build(output=None, config=None, base_path=None):
     allowed = {"index.html", ".nojekyll"} | {f"{lang}/index.html" for lang in LANGUAGES} | {f"assets/{asset}" for asset in assets}
     allowed |= {"support/index.html"} | {f"{lang}/support/index.html" for lang in LANGUAGES}
     existing = {str(path.relative_to(output)) for path in output.rglob("*") if path.is_file()}
-    if existing - allowed:
+    legacy = {"assets/app-icon.png"} | {f"assets/screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS}
+    if existing - allowed - legacy:
         raise ValueError("Output contains unexpected files; use an empty output directory")
+    for old in existing & legacy:
+        (output / old).unlink()
     output.mkdir(parents=True, exist_ok=True)
     for asset in assets:
         destination = output / "assets" / asset

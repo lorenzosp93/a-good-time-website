@@ -68,8 +68,9 @@ def export_issue_forms(destination):
 def render_support(lang, values, common, config, base):
     data = {key: e(value) for key, value in values.items() if isinstance(value, str)}
     site = config['site_url'].rstrip('/')
+    data["styles"] = (ROOT / "assets/style.css").read_text()
     data.update(lang=lang, base=e(base), canonical=e(f'{site}/{lang}/support/'), skip=e(common['skip']), language_label=e(common['language_label']), privacy_link=e(common['privacy_link']))
-    data['alternates'] = '\n'.join(f'<link rel="alternate" hreflang="{code}" href="{e(site)}/{code}/support/">' for code in LANGUAGES) + f'\n<link rel="alternate" hreflang="x-default" href="{e(site)}/support/">'
+    data['alternates'] = '\n'.join(f'<link rel="alternate" hreflang="{code}" href="{e(site)}/{code}/support/">' for code in LANGUAGES) + f'\n<link rel="alternate" hreflang="x-default" href="{e(site)}/en/support/">'
     data['languages'] = ''.join(f'<a href="{e(base)}/{code}/support/" lang="{code}" hreflang="{code}" aria-label="{name}"' + (' aria-current="page"' if code == lang else '') + f'>{code.upper()}</a>' for code, name in LANGUAGES.items())
     data['existing_url'] = REPOSITORY + '/issues'
     data['email'] = EMAIL

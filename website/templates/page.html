@@ -14,15 +14,15 @@
   <meta property="og:url" content="$canonical">
   <link rel="canonical" href="$canonical">
   $alternates
-  <link rel="icon" type="image/png" href="${base}/assets/app-icon.png">
-  <link rel="stylesheet" href="${base}/assets/style.css">
+  <link rel="icon" type="image/png" href="${base}/assets/app-icon-small.png">
+  <style>$styles</style>
   <script src="${base}/assets/motion.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">$skip</a>
   <header class="site-header wrap">
     <a class="brand" href="${base}/${lang}/" aria-label="A Good Time">
-      <img src="${base}/assets/app-icon.png" width="42" height="42" alt="">
+      <img src="${base}/assets/app-icon-small.png" width="42" height="42" alt="">
       <span>A Good Time</span>
     </a>
     <nav class="languages" aria-label="$language_label">$languages</nav>
@@ -37,7 +37,7 @@
         <p class="small-note">$hero_note</p>
       </div>
       <figure class="hero-visual">
-        <div class="phone"><img src="${base}/assets/screenshots/${lang}-now.png" alt="$now_alt" width="1206" height="2622" fetchpriority="high"></div>
+        <div class="phone"><img src="${base}/assets/screenshots/${lang}-now.webp" alt="$now_alt" width="1206" height="2622" fetchpriority="high"></div>
         <figcaption><span class="caption-index">01 /</span> $hero_caption</figcaption>
       </figure>
     </section>
@@ -57,6 +57,6 @@
     <section class="faq wrap" aria-labelledby="faq-title"><h2 id="faq-title">$faq_title</h2><div>$faqs</div></section>
     <section class="closing wrap" aria-labelledby="closing-title"><p class="eyebrow">$closing_eyebrow</p><h2 id="closing-title">$closing_title</h2><p>$closing_intro</p>$cta<p class="small-note">$closing_note</p></section>
   </main>
-  <footer class="site-footer wrap"><a class="brand" href="${base}/${lang}/"><img src="${base}/assets/app-icon.png" width="32" height="32" alt=""><span>A Good Time</span></a><p>$footer <a href="https://lorenzosp.com">Lorenzo Spinelli</a>.</p><nav class="footer-links" aria-label="$support_link"><a href="${base}/${lang}/support/">$support_link</a><a href="#privacy">$privacy_link</a></nav></footer>
+  <footer class="site-footer wrap"><a class="brand" href="${base}/${lang}/"><img src="${base}/assets/app-icon-small.png" width="32" height="32" alt=""><span>A Good Time</span></a><p>$footer <a href="https://lorenzosp.com">Lorenzo Spinelli</a>.</p><nav class="footer-links" aria-label="$support_link"><a href="${base}/${lang}/support/">$support_link</a><a href="#privacy">$privacy_link</a></nav></footer>
 </body>
 </html>
