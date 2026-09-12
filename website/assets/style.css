@@ -1,5 +1,6 @@
 /* A quiet, readable canvas for the real app. All assets are served locally. */
 :root {
+  color-scheme:light dark;
   --paper:#f7f5ed;
   --ink:#253e34;
   --muted:#526158;
@@ -7,6 +8,12 @@
   --green:#325b44;
   --wash:#e8eddf;
   --white:#fffef9;
+  --button-ink:#fffef9;
+  --button-hover:#254834;
+  --wash-warm:#ece9df;
+  --wash-cool:#e4e9e5;
+  --rule:#bec9b9;
+  --aside-rule:#aab8a0;
   --serif:Georgia,'Times New Roman',serif;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 }
@@ -165,7 +172,7 @@ p {
   border-radius:6px;
   border:1px solid var(--green);
   background:var(--green);
-  color:var(--white);
+  color:var(--button-ink);
   font:600 13px/1.5 var(--sans);
   text-decoration:none;
   text-align:center;
@@ -175,7 +182,7 @@ p {
   opacity:1;
 }
 .cta[href]:hover {
-  background:#254834;
+  background:var(--button-hover);
 }
 .text-link {
   font-size:13px;
@@ -271,10 +278,10 @@ figcaption {
   border-radius:12px;
 }
 .story-row:nth-of-type(3) .story-image {
-  background:#ece9df;
+  background:var(--wash-warm);
 }
 .story-row:nth-of-type(4) .story-image {
-  background:#e4e9e5;
+  background:var(--wash-cool);
 }
 .story-image .phone {
   max-width:252px;
@@ -308,7 +315,7 @@ figcaption {
 }
 .story-copy .aside {
   font-size:12px;
-  border-left:2px solid #aab8a0;
+  border-left:2px solid var(--aside-rule);
   padding-left:16px;
   margin-top:25px;
 }
@@ -322,7 +329,7 @@ figcaption {
   gap:42px 40px;
 }
 .feature {
-  border-top:1px solid #bec9b9;
+  border-top:1px solid var(--rule);
   padding-top:20px;
 }
 .feature-index {
@@ -641,3 +648,22 @@ figcaption {
   cursor: pointer; box-shadow: 0 3px 18px #0003; white-space: nowrap;
 }
 .demo-replay[hidden] { display: none; }
+
+/* Keep the app media authentic; only the surrounding page changes theme. */
+@media(prefers-color-scheme:dark) {
+  :root {
+    --paper:#171e1a;
+    --ink:#eeeFE5;
+    --muted:#b8c4b9;
+    --line:#3e4e42;
+    --green:#a9ceb0;
+    --wash:#232f27;
+    --white:#28372d;
+    --button-ink:#18261d;
+    --button-hover:#c0dfc5;
+    --wash-warm:#302f26;
+    --wash-cool:#25312d;
+    --rule:#526453;
+    --aside-rule:#78927b;
+  }
+}
