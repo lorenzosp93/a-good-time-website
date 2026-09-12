@@ -84,7 +84,7 @@
     "Places and Screen Time are optional, so you choose which permissions to enable.",
     "Exporting app data is an explicit choice, never an automatic upload."
   ],
-  "privacy_note": "If you connect Apple Reminders, linked reminders follow the sync settings of your chosen Apple account. This website uses no analytics or cookies; GitHub provides the hosting.",
+  "privacy_note": "If you connect Apple Reminders, linked reminders follow the sync settings of your chosen Apple account. This website uses no analytics or cookies; GitHub provides the hosting. Only share what is needed. Remove task names, calendar details, locations and other personal information from screenshots. Nothing is uploaded automatically. GitHub and your email provider process what you choose to send.",
   "faq_title": "A few things to know.",
   "faqs": [
     [
@@ -119,5 +119,6 @@
   "completion_alt": "A practice nudge arrives, its reason is reviewed, and the task is accepted, shown as a Live Activity, reopened and completed.",
   "capture_motion_alt": "A real iPhone recording showing keyboard dictation and an editable task draft filled from the description.",
   "play_demo": "Play animation",
-  "replay_demo": "Replay"
+  "replay_demo": "Replay",
+  "support_link": "Support"
 }

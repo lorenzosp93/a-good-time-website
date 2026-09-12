@@ -8,6 +8,7 @@ import re
 import shutil
 from string import Template
 from urllib.parse import urlsplit
+from support import load_support, render_support
 
 ROOT = Path(__file__).resolve().parent
 LANGUAGES = {"en": "English", "it": "Italiano", "es": "Español"}
@@ -113,13 +114,15 @@ def build(output=None, config=None, base_path=None):
     if base and not re.fullmatch(r"(/[A-Za-z0-9_-]+)+", base):
         raise ValueError("base path must contain only URL path segments")
     content = load_content()
+    support_content = load_support()
     # Explicit asset allowlist: no app sources, documents, test exports or personal data.
-    assets = ["app-icon.png", "style.css", "motion.js"] + [f"screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS]
+    assets = ["app-icon.png", "style.css", "motion.js", "support.js"] + [f"screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS]
     assets += [f"demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)]
     for asset in assets:
         if not (ROOT / "assets" / asset).is_file():
             raise FileNotFoundError(f"Missing public asset: {asset}")
     allowed = {"index.html", ".nojekyll"} | {f"{lang}/index.html" for lang in LANGUAGES} | {f"assets/{asset}" for asset in assets}
+    allowed |= {"support/index.html"} | {f"{lang}/support/index.html" for lang in LANGUAGES}
     existing = {str(path.relative_to(output)) for path in output.rglob("*") if path.is_file()}
     if existing - allowed:
         raise ValueError("Output contains unexpected files; use an empty output directory")
@@ -132,6 +135,9 @@ def build(output=None, config=None, base_path=None):
         (output / lang).mkdir(exist_ok=True)
         (output / lang / "index.html").write_text(render(lang, values, config, base), encoding="utf-8")
     (output / "index.html").write_text(render("en", content["en"], config, base), encoding="utf-8")
+    for route, lang in [("support", "en")] + [(f"{lang}/support", lang) for lang in LANGUAGES]:
+        (output / route).mkdir(parents=True, exist_ok=True)
+        (output / route / "index.html").write_text(render_support(lang, support_content[lang], content[lang], config, base), encoding="utf-8")
     (output / ".nojekyll").touch()
     return output
 

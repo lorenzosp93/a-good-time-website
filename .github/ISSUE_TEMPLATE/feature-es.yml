@@ -1,0 +1,75 @@
+{
+  "name": "Solicitar una función · Español",
+  "description": "Describe una necesidad que A Good Time todavía no cubre.",
+  "labels": [
+    "feature-request",
+    "needs-triage"
+  ],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "GitHub requiere una cuenta. Los informes, las respuestas y los archivos adjuntos son públicos. Para detalles privados o si no tienes cuenta de GitHub, usa el correo electrónico.\n\nComparte solo lo necesario. Elimina nombres de tareas, detalles del calendario, ubicaciones y otros datos personales de las capturas. No se sube nada automáticamente. GitHub y tu proveedor de correo procesan lo que decides enviar.\n\n[Contactar en privado por correo](https://agoodtime.to/es/support/#private)"
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "surface",
+      "attributes": {
+        "label": "¿Dónde ocurre?",
+        "description": "Elige la app o el sitio al que se refiere la solicitud.",
+        "options": [
+          "iPhone",
+          "Apple Watch",
+          "Sitio web"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-1",
+      "attributes": {
+        "label": "¿Qué necesidad no está cubierta?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-2",
+      "attributes": {
+        "label": "Describe una situación en la que sería útil."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "additional",
+      "attributes": {
+        "label": "Tu solución actual (opcional)"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "public-consent",
+      "attributes": {
+        "label": "Soporte",
+        "options": [
+          {
+            "label": "Entiendo que este informe y los archivos adjuntos serán públicos.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}

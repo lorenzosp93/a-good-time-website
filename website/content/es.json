@@ -84,7 +84,7 @@
     "Lugares y Tiempo de uso son opcionales, por lo que tú eliges qué permisos activar.",
     "Exportar datos es una decisión explícita, nunca una subida automática."
   ],
-  "privacy_note": "Si conectas Recordatorios de Apple, los recordatorios siguen los ajustes de sincronización de la cuenta de Apple elegida. Este sitio no usa analítica ni cookies; GitHub proporciona el alojamiento.",
+  "privacy_note": "Si conectas Recordatorios de Apple, los recordatorios siguen los ajustes de sincronización de la cuenta de Apple elegida. Este sitio no usa analítica ni cookies; GitHub proporciona el alojamiento. Comparte solo lo necesario. Elimina nombres de tareas, detalles del calendario, ubicaciones y otros datos personales de las capturas. No se sube nada automáticamente. GitHub y tu proveedor de correo procesan lo que decides enviar.",
   "faq_title": "Algunas cosas que conviene saber.",
   "faqs": [
     [
@@ -119,5 +119,6 @@
   "completion_alt": "Llega una sugerencia de ejemplo: se revisa el motivo, se acepta la tarea, aparece como Actividad en directo y se vuelve a abrir para completarla.",
   "capture_motion_alt": "Una grabación real en iPhone muestra el dictado y un borrador editable rellenado a partir de la descripción.",
   "play_demo": "Reproducir animación",
-  "replay_demo": "Volver a ver"
+  "replay_demo": "Volver a ver",
+  "support_link": "Soporte"
 }

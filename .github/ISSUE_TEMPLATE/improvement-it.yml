@@ -1,0 +1,75 @@
+{
+  "name": "Suggerisci un miglioramento · Italiano",
+  "description": "Aiutaci a rendere una parte di A Good Time più semplice o utile.",
+  "labels": [
+    "improvement",
+    "needs-triage"
+  ],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "GitHub richiede un account. Segnalazioni, risposte e allegati sono pubblici. Per informazioni private o se non hai un account GitHub, usa l’email.\n\nCondividi solo ciò che serve. Rimuovi nomi delle attività, dettagli del calendario, luoghi e altre informazioni personali dalle schermate. Nulla viene caricato automaticamente. GitHub e il tuo provider email elaborano ciò che scegli di inviare.\n\n[Contatta privatamente via email](https://agoodtime.to/it/support/#private)"
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "surface",
+      "attributes": {
+        "label": "Dove succede?",
+        "description": "Scegli l’app o il sito a cui si riferisce la richiesta.",
+        "options": [
+          "iPhone",
+          "Apple Watch",
+          "Sito web"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-1",
+      "attributes": {
+        "label": "Quale esperienza esistente potrebbe migliorare?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-2",
+      "attributes": {
+        "label": "Cosa vorresti riuscire a fare?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "additional",
+      "attributes": {
+        "label": "La modifica che proponi (facoltativo)"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "public-consent",
+      "attributes": {
+        "label": "Assistenza",
+        "options": [
+          {
+            "label": "Capisco che questa segnalazione e gli eventuali allegati saranno pubblici.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}

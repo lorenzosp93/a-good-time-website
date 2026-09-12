@@ -1,0 +1,97 @@
+{
+  "name": "Pedir ayuda / informar de un problema · Español",
+  "description": "Cuéntanos qué intentabas hacer y qué ocurrió. No necesitas conocer la causa.",
+  "labels": [
+    "support",
+    "needs-triage"
+  ],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "GitHub requiere una cuenta. Los informes, las respuestas y los archivos adjuntos son públicos. Para detalles privados o si no tienes cuenta de GitHub, usa el correo electrónico.\n\nComparte solo lo necesario. Elimina nombres de tareas, detalles del calendario, ubicaciones y otros datos personales de las capturas. No se sube nada automáticamente. GitHub y tu proveedor de correo procesan lo que decides enviar.\n\n[Contactar en privado por correo](https://agoodtime.to/es/support/#private)"
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "surface",
+      "attributes": {
+        "label": "¿Dónde ocurre?",
+        "description": "Elige la app o el sitio al que se refiere la solicitud.",
+        "options": [
+          "iPhone",
+          "Apple Watch",
+          "Sitio web"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-1",
+      "attributes": {
+        "label": "¿Qué intentabas hacer?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-2",
+      "attributes": {
+        "label": "¿Qué ocurrió?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-3",
+      "attributes": {
+        "label": "¿Qué esperabas?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "id": "answer-4",
+      "attributes": {
+        "label": "Versión de la app y del sistema operativo",
+        "description": "En la app: Ajustes → Ayuda y privacidad → Copiar información técnica. Para el sitio, incluye el navegador y la versión del sistema si los conoces. Si no lo sabes, escribe «no lo sé»."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "additional",
+      "attributes": {
+        "label": "Pasos o capturas (opcional)",
+        "description": "Si puedes, explica cómo reproducir el problema. Elimina la información personal antes de adjuntar archivos."
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "public-consent",
+      "attributes": {
+        "label": "Soporte",
+        "options": [
+          {
+            "label": "Entiendo que este informe y los archivos adjuntos serán públicos.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}

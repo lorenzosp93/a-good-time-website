@@ -3,9 +3,9 @@ name: Website
 on:
   push:
     branches: [main, master]
-    paths: ['website/**', '.github/workflows/website.yml']
+    paths: ['website/**', '.github/ISSUE_TEMPLATE/**', '.github/workflows/website.yml']
   pull_request:
-    paths: ['website/**', '.github/workflows/website.yml']
+    paths: ['website/**', '.github/ISSUE_TEMPLATE/**', '.github/workflows/website.yml']
   workflow_dispatch:
 
 permissions:
@@ -27,6 +27,8 @@ jobs:
         run: python3 -m unittest discover -s website -p 'test_*.py' -v
       - name: Validate demo playback
         run: node website/test_motion.cjs
+      - name: Validate support copying and fallback
+        run: node website/test_support.cjs
       - name: Build static website
         run: python3 website/build.py
       - name: Upload public website only

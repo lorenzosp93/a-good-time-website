@@ -1,0 +1,80 @@
+{
+  "title": "Soporte",
+  "intro": "Pide ayuda, sugiere una mejora o comparte una idea para A Good Time.",
+  "public_notice": "GitHub requiere una cuenta. Los informes, las respuestas y los archivos adjuntos son públicos. Para detalles privados o si no tienes cuenta de GitHub, usa el correo electrónico.",
+  "privacy": "Comparte solo lo necesario. Elimina nombres de tareas, detalles del calendario, ubicaciones y otros datos personales de las capturas. No se sube nada automáticamente. GitHub y tu proveedor de correo procesan lo que decides enviar.",
+  "expectations": "Puedes escribir en español, inglés o italiano. Revisamos las solicitudes, pero enviarlas no garantiza una función ni una fecha de lanzamiento.",
+  "public_action": "Abrir formulario de GitHub",
+  "email_action": "Contactar en privado por correo",
+  "existing": "Consultar informes e ideas existentes",
+  "private_title": "¿Prefieres contactar en privado?",
+  "private_intro": "Escribe a support@agoodtime.to. Elige una categoría arriba para abrir un borrador con preguntas útiles. Abrir un borrador no envía el mensaje.",
+  "fallback": "¿No tienes una app de correo? Copia la dirección y abre «Preguntas para el correo» en la categoría elegida para copiar las preguntas en tu servicio de correo preferido.",
+  "copy_address": "Copiar dirección de correo",
+  "copy_prompts": "Copiar preguntas",
+  "copied": "Copiado.",
+  "copy_failed": "No se pudo copiar. Selecciona y copia el texto de abajo.",
+  "prompts": "Preguntas para el correo",
+  "optional": "opcional",
+  "surface": "¿Dónde ocurre?",
+  "surfaces": [
+    "iPhone",
+    "Apple Watch",
+    "Sitio web"
+  ],
+  "surface_hint": "Elige la app o el sitio al que se refiere la solicitud.",
+  "unknown": "Si no lo sabes, escribe «no lo sé».",
+  "tech_hint": "En la app: Ajustes → Ayuda y privacidad → Copiar información técnica. Para el sitio, incluye el navegador y la versión del sistema si los conoces.",
+  "attachments": "Pasos o capturas (opcional)",
+  "attachments_hint": "Si puedes, explica cómo reproducir el problema. Elimina la información personal antes de adjuntar archivos.",
+  "ack": "Entiendo que este informe y los archivos adjuntos serán públicos.",
+  "quick_title": "Algunas respuestas rápidas",
+  "quick_intro": "Estas respuestas pueden ayudarte. Puedes contactarnos directamente sin completar ningún paso de solución de problemas.",
+  "faqs": [
+    [
+      "¿Por qué no recibí una sugerencia?",
+      "Revisa Ajustes → Sugerencias: sugerencias automáticas, límite diario y permiso de notificaciones. Después, revisa Tus horarios. La disponibilidad del calendario, el lugar y las características de las tareas también pueden impedir que haya una sugerencia adecuada. El silencio puede ser normal; más contexto no garantiza una notificación."
+    ],
+    [
+      "¿Dónde reviso las apps conectadas?",
+      "Abre Ajustes → Apps conectadas para Calendarios, Recordatorios y Tiempo de uso opcional. Los permisos están en cada función. Tiempo de uso nunca es necesario para usar A Good Time."
+    ],
+    [
+      "¿Cómo envío comentarios sobre la beta?",
+      "Si usas TestFlight, puedes enviar comentarios desde TestFlight o hacer una captura dentro de la app y elegir Compartir comentarios de la beta. Revisa las capturas antes de enviarlas."
+    ]
+  ],
+  "categories": [
+    {
+      "id": "problem",
+      "title": "Pedir ayuda / informar de un problema",
+      "intro": "Cuéntanos qué intentabas hacer y qué ocurrió. No necesitas conocer la causa.",
+      "fields": [
+        "¿Qué intentabas hacer?",
+        "¿Qué ocurrió?",
+        "¿Qué esperabas?",
+        "Versión de la app y del sistema operativo"
+      ]
+    },
+    {
+      "id": "improvement",
+      "title": "Sugerir una mejora",
+      "intro": "Ayuda a hacer una parte de A Good Time más sencilla o útil.",
+      "fields": [
+        "¿Qué experiencia existente podría mejorar?",
+        "¿Qué te gustaría conseguir?"
+      ],
+      "optional_field": "El cambio que propones (opcional)"
+    },
+    {
+      "id": "feature",
+      "title": "Solicitar una función",
+      "intro": "Describe una necesidad que A Good Time todavía no cubre.",
+      "fields": [
+        "¿Qué necesidad no está cubierta?",
+        "Describe una situación en la que sería útil."
+      ],
+      "optional_field": "Tu solución actual (opcional)"
+    }
+  ]
+}

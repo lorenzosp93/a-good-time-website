@@ -1,0 +1,80 @@
+{
+  "title": "Support",
+  "intro": "Get help, improve something, or share an idea for A Good Time.",
+  "public_notice": "GitHub requires an account. Reports, replies and attachments are public. For private details or without a GitHub account, use email instead.",
+  "privacy": "Only share what is needed. Remove task names, calendar details, locations and other personal information from screenshots. Nothing is uploaded automatically. GitHub and your email provider process what you choose to send.",
+  "expectations": "You can write in English, Italian or Spanish. Requests are reviewed, but a submission is not a promise of a feature or delivery date.",
+  "public_action": "Open GitHub form",
+  "email_action": "Contact privately by email",
+  "existing": "Browse existing reports and ideas",
+  "private_title": "Prefer private contact?",
+  "private_intro": "Email support@agoodtime.to. Choose a category above for a draft with helpful questions. Opening a draft does not send it.",
+  "fallback": "No mail app? Copy the address and expand “Email questions” under your chosen category to copy the prompts into your preferred email service.",
+  "copy_address": "Copy email address",
+  "copy_prompts": "Copy questions",
+  "copied": "Copied.",
+  "copy_failed": "Could not copy. Select and copy the text below.",
+  "prompts": "Email questions",
+  "optional": "optional",
+  "surface": "Where does this happen?",
+  "surfaces": [
+    "iPhone",
+    "Apple Watch",
+    "Website"
+  ],
+  "surface_hint": "Choose the app or website this concerns.",
+  "unknown": "If you do not know, write “unknown”.",
+  "tech_hint": "In the app: Settings → Help & privacy → Copy technical information. For the website, include your browser and OS version if known.",
+  "attachments": "Steps or screenshots (optional)",
+  "attachments_hint": "If possible, explain how to reproduce the problem. Remove personal information before attaching anything.",
+  "ack": "I understand this report and any attachments will be public.",
+  "quick_title": "A few quick answers",
+  "quick_intro": "These may help. You can contact us directly without completing any troubleshooting steps.",
+  "faqs": [
+    [
+      "Why didn’t I receive a suggestion?",
+      "Check Settings → Nudges: automatic suggestions, the daily limit and notification permission. Then check Your schedule for welcome hours. Calendar availability, place and task suitability can also mean no suggestion fits. Silence can be expected; more context does not guarantee a notification."
+    ],
+    [
+      "Where do I check connected apps?",
+      "Open Settings → Connected apps for Calendars, Reminders and optional Screen Time. Permissions live with each feature. Screen Time is never required to use A Good Time."
+    ],
+    [
+      "How can I send beta feedback?",
+      "If you use TestFlight, you can also send feedback from TestFlight or take an in-app screenshot and choose Share Beta Feedback. Review screenshots before sending them."
+    ]
+  ],
+  "categories": [
+    {
+      "id": "problem",
+      "title": "Get help / report a problem",
+      "intro": "Tell us what you were trying to do and what happened. You do not need to know the cause.",
+      "fields": [
+        "What were you trying to do?",
+        "What happened?",
+        "What did you expect?",
+        "App version and OS version"
+      ]
+    },
+    {
+      "id": "improvement",
+      "title": "Suggest an improvement",
+      "intro": "Help make an existing part of A Good Time easier or more useful.",
+      "fields": [
+        "Which existing experience could be better?",
+        "What would you like to accomplish?"
+      ],
+      "optional_field": "Your proposed change (optional)"
+    },
+    {
+      "id": "feature",
+      "title": "Request a feature",
+      "intro": "Describe a need that A Good Time does not yet address.",
+      "fields": [
+        "What need is not met?",
+        "Describe a situation where this would help."
+      ],
+      "optional_field": "Your current workaround (optional)"
+    }
+  ]
+}

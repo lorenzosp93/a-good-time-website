@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="$lang">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <title>$title — A Good Time</title>
+  <meta name="description" content="$intro">
+  <link rel="canonical" href="$canonical">
+  $alternates
+  <link rel="icon" type="image/png" href="${base}/assets/app-icon.png">
+  <link rel="stylesheet" href="${base}/assets/style.css">
+  <script src="${base}/assets/support.js" defer></script>
+</head>
+<body class="support-page" data-copied="$copied" data-copy-failed="$copy_failed">
+  <a class="skip-link" href="#main">$skip</a>
+  <header class="site-header wrap">
+    <a class="brand" href="${base}/${lang}/"><img src="${base}/assets/app-icon.png" width="42" height="42" alt=""><span>A Good Time</span></a>
+    <nav class="languages" aria-label="$language_label">$languages</nav>
+  </header>
+  <main id="main" class="wrap support-main">
+    <div class="support-intro"><h1>$title</h1><p class="hero-description">$intro</p><p>$expectations</p></div>
+    <aside class="support-notice" aria-label="$title"><p id="public-notice">$public_notice</p><p><a href="#private">$email_action</a> · <a href="$existing_url">$existing</a></p></aside>
+    <div class="support-cards">$cards</div>
+    <section id="private" class="support-private" aria-labelledby="private-title"><h2 id="private-title">$private_title</h2><p>$private_intro</p><p><a href="mailto:$email" id="support-email">$email</a></p><button type="button" class="copy-button" hidden data-copy="support-email">$copy_address</button><p>$fallback</p><p>$privacy</p></section>
+    <section class="faq" aria-labelledby="quick-title"><div><h2 id="quick-title">$quick_title</h2><p>$quick_intro</p></div><div>$faqs</div></section>
+    <p id="copy-status" role="status" aria-live="polite"></p>
+  </main>
+  <footer class="site-footer wrap"><a class="brand" href="${base}/${lang}/">A Good Time</a><a href="${base}/${lang}/#privacy">$privacy_link</a></footer>
+</body>
+</html>

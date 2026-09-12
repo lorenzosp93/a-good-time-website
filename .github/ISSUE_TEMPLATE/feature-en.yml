@@ -1,0 +1,75 @@
+{
+  "name": "Request a feature · English",
+  "description": "Describe a need that A Good Time does not yet address.",
+  "labels": [
+    "feature-request",
+    "needs-triage"
+  ],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "GitHub requires an account. Reports, replies and attachments are public. For private details or without a GitHub account, use email instead.\n\nOnly share what is needed. Remove task names, calendar details, locations and other personal information from screenshots. Nothing is uploaded automatically. GitHub and your email provider process what you choose to send.\n\n[Contact privately by email](https://agoodtime.to/en/support/#private)"
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "surface",
+      "attributes": {
+        "label": "Where does this happen?",
+        "description": "Choose the app or website this concerns.",
+        "options": [
+          "iPhone",
+          "Apple Watch",
+          "Website"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-1",
+      "attributes": {
+        "label": "What need is not met?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-2",
+      "attributes": {
+        "label": "Describe a situation where this would help."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "additional",
+      "attributes": {
+        "label": "Your current workaround (optional)"
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "public-consent",
+      "attributes": {
+        "label": "Support",
+        "options": [
+          {
+            "label": "I understand this report and any attachments will be public.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}

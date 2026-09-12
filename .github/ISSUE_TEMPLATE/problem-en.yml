@@ -1,0 +1,97 @@
+{
+  "name": "Get help / report a problem · English",
+  "description": "Tell us what you were trying to do and what happened. You do not need to know the cause.",
+  "labels": [
+    "support",
+    "needs-triage"
+  ],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "GitHub requires an account. Reports, replies and attachments are public. For private details or without a GitHub account, use email instead.\n\nOnly share what is needed. Remove task names, calendar details, locations and other personal information from screenshots. Nothing is uploaded automatically. GitHub and your email provider process what you choose to send.\n\n[Contact privately by email](https://agoodtime.to/en/support/#private)"
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "surface",
+      "attributes": {
+        "label": "Where does this happen?",
+        "description": "Choose the app or website this concerns.",
+        "options": [
+          "iPhone",
+          "Apple Watch",
+          "Website"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-1",
+      "attributes": {
+        "label": "What were you trying to do?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-2",
+      "attributes": {
+        "label": "What happened?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "answer-3",
+      "attributes": {
+        "label": "What did you expect?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "id": "answer-4",
+      "attributes": {
+        "label": "App version and OS version",
+        "description": "In the app: Settings → Help & privacy → Copy technical information. For the website, include your browser and OS version if known. If you do not know, write “unknown”."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "additional",
+      "attributes": {
+        "label": "Steps or screenshots (optional)",
+        "description": "If possible, explain how to reproduce the problem. Remove personal information before attaching anything."
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "public-consent",
+      "attributes": {
+        "label": "Support",
+        "options": [
+          {
+            "label": "I understand this report and any attachments will be public.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}
