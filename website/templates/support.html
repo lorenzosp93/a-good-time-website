@@ -9,14 +9,15 @@
   <meta name="description" content="$intro">
   <link rel="canonical" href="$canonical">
   $alternates
-  <link rel="icon" type="image/png" href="${base}/assets/app-icon-small.png">
+  <link rel="icon" type="image/png" href="${base}/assets/app-icon-small.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="${base}/assets/app-icon-dark.png" media="(prefers-color-scheme: dark)">
   <style>$styles</style>
   <script src="${base}/assets/support.js" defer></script>
 </head>
 <body class="support-page" data-copied="$copied" data-copy-failed="$copy_failed">
   <a class="skip-link" href="#main">$skip</a>
   <header class="site-header wrap">
-    <a class="brand" href="${base}/${lang}/"><img src="${base}/assets/app-icon-small.png" width="42" height="42" alt=""><span>A Good Time</span></a>
+    <a class="brand" href="${base}/${lang}/"><picture><source media="(prefers-color-scheme: dark)" srcset="${base}/assets/app-icon-dark.png"><img src="${base}/assets/app-icon-small.png" width="42" height="42" alt=""></picture><span>A Good Time</span></a>
     <nav class="languages" aria-label="$language_label">$languages</nav>
   </header>
   <main id="main" class="wrap support-main">

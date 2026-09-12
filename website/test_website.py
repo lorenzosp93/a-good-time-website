@@ -77,7 +77,7 @@ class WebsiteTests(unittest.TestCase):
                 if enabled:
                     self.assertNotIn(copy["cta_soon"], text)
                     self.assertNotIn(copy["closing_note"], text)
-        expected = {"index.html", ".nojekyll", "assets/style.css", "assets/motion.js", "assets/app-icon-small.png"}
+        expected = {"index.html", ".nojekyll", "assets/style.css", "assets/motion.js", "assets/app-icon-small.png", "assets/app-icon-dark.png"}
         expected |= {f"{lang}/index.html" for lang in LANGUAGES}
         expected |= {f"assets/screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS}
         expected |= {f"assets/demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)}

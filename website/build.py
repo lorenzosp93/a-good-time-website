@@ -117,7 +117,7 @@ def build(output=None, config=None, base_path=None):
     content = load_content()
     support_content = load_support()
     # Explicit asset allowlist: no app sources, documents, test exports or personal data.
-    assets = ["app-icon-small.png", "style.css", "motion.js", "support.js"] + [f"screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS]
+    assets = ["app-icon-small.png", "app-icon-dark.png", "style.css", "motion.js", "support.js"] + [f"screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS]
     assets += [f"demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)]
     for asset in assets:
         if not (ROOT / "assets" / asset).is_file():

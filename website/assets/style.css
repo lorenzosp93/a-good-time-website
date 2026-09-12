@@ -691,3 +691,5 @@ figcaption {
   .support-intro { padding-top: 40px; }
   .support-page .site-header { flex-wrap: wrap; }
 }
+
+.brand picture { display:block; flex-shrink:0; }
