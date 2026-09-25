@@ -1,19 +1,22 @@
-/* A quiet, readable canvas for the real app. All assets are served locally. */
+/* A quiet, readable canvas for the real app. All assets are served locally.
+   Palette follows the "Opening" mark (docs/brand): deep teal, cream, a coral dot. */
 :root {
   color-scheme:light dark;
-  --paper:#f7f5ed;
-  --ink:#253e34;
-  --muted:#526158;
-  --line:#d9ddd1;
-  --green:#325b44;
-  --wash:#e8eddf;
-  --white:#fffef9;
-  --button-ink:#fffef9;
-  --button-hover:#254834;
-  --wash-warm:#ece9df;
-  --wash-cool:#e4e9e5;
-  --rule:#bec9b9;
-  --aside-rule:#aab8a0;
+  --paper:#f7f2e8;
+  --ink:#0e3b43;
+  --muted:#4b6266;
+  --line:#ddd5c5;
+  --green:#0e3b43;
+  --coral:#e4683f;
+  --wash:#ede5d5;
+  --white:#fffcf6;
+  --button-ink:#f3ebdd;
+  --button-hover:#16535d;
+  --wash-warm:#f3e5d9;
+  --wash-cool:#e3ece9;
+  --rule:#cbc2af;
+  --aside-rule:#9fbfba;
+  --phone:#10262a;
   --serif:Georgia,'Times New Roman',serif;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 }
@@ -146,7 +149,7 @@ p {
   width:6px;
   height:6px;
   border-radius:50%;
-  background:var(--green);
+  background:var(--coral);
   margin-right:9px;
   vertical-align:middle;
 }
@@ -212,11 +215,11 @@ p {
   width:100%;
   max-width:282px;
   margin:auto;
-  border:6px solid #26382f;
+  border:6px solid var(--phone);
   border-radius:42px;
-  background:#26382f;
+  background:var(--phone);
   overflow:hidden;
-  box-shadow:0 20px 40px -20px #243a3440;
+  box-shadow:0 20px 40px -20px #0e3b4340;
 }
 .phone img {
   width:100%;
@@ -643,8 +646,8 @@ figcaption {
 .demo video { display: block; width: 100%; height: auto; }
 .demo-replay {
   position: absolute; left: 50%; bottom: 12%; transform: translateX(-50%);
-  padding: .7rem 1.2rem; border: 1px solid #f8f6ed; border-radius: 999px;
-  background: #244b39; color: #fff; font: inherit; font-weight: 600;
+  padding: .7rem 1.2rem; border: 1px solid #f3ebdd; border-radius: 999px;
+  background: #0e3b43; color: #f3ebdd; font: inherit; font-weight: 600;
   cursor: pointer; box-shadow: 0 3px 18px #0003; white-space: nowrap;
 }
 .demo-replay[hidden] { display: none; }
@@ -652,19 +655,21 @@ figcaption {
 /* Keep the app media authentic; only the surrounding page changes theme. */
 @media(prefers-color-scheme:dark) {
   :root {
-    --paper:#171e1a;
-    --ink:#eeeFE5;
-    --muted:#b8c4b9;
-    --line:#3e4e42;
-    --green:#a9ceb0;
-    --wash:#232f27;
-    --white:#28372d;
-    --button-ink:#18261d;
-    --button-hover:#c0dfc5;
-    --wash-warm:#302f26;
-    --wash-cool:#25312d;
-    --rule:#526453;
-    --aside-rule:#78927b;
+    --paper:#0b1719;
+    --ink:#f3ebdd;
+    --muted:#b4c4c2;
+    --line:#26393c;
+    --green:#9fd6cf;
+    --coral:#ff8a65;
+    --wash:#132427;
+    --white:#172a2d;
+    --button-ink:#0b1719;
+    --button-hover:#c0e7e1;
+    --wash-warm:#221e1b;
+    --wash-cool:#11272b;
+    --rule:#36504f;
+    --aside-rule:#5f8f8a;
+    --phone:#050c0d;
   }
 }
 

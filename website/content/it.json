@@ -33,9 +33,9 @@
     {
       "screen": "focus",
       "title": "Inizia un’attività e registra ciò che fai.",
-      "body": "Una sessione dedicata riunisce l’attività e i comandi per completarla. Puoi segnarla come conclusa, registrare i progressi di un’attività continuativa oppure fermarti e riprenderla più tardi.",
+      "body": "Quando inizi, l’attività resta nella schermata Ora con un timer discreto. Puoi segnarla come conclusa, registrare i progressi di un’attività continuativa oppure fermarti e riprenderla più tardi.",
       "aside": "Quando hai un momento libero, puoi chiedere un suggerimento senza aspettare una notifica automatica.",
-      "alt": "L’attività di esempio Fare stretching alle spalle è in corso, con i comandi per completarla o interromperla.",
+      "alt": "L’attività di esempio Fare stretching alle spalle è in corso nella schermata Ora, con un timer e i comandi per completarla o interromperla.",
       "caption": "Dalla notifica al completamento dell’attività."
     },
     {
@@ -116,7 +116,7 @@
   "privacy_link": "Privacy",
   "available_note": "Usa TestFlight per installare la beta sul tuo iPhone.",
   "available_answer": "Sì. Usa il link TestFlight su questa pagina per partecipare alla beta. L’accesso può dipendere dai posti disponibili.",
-  "completion_alt": "Arriva un suggerimento di esempio: si legge il motivo, si accetta l’attività, la si vede come Attività in tempo reale, poi la si riapre e completa.",
+  "completion_alt": "Arriva un suggerimento di esempio e si apre nella schermata Ora con il suo motivo: si avvia l’attività, la si vede come Attività in tempo reale, poi la si riapre e completa.",
   "capture_motion_alt": "Una registrazione reale su iPhone mostra la dettatura e una bozza modificabile compilata dalla descrizione.",
   "play_demo": "Riproduci animazione",
   "replay_demo": "Rivedi",
