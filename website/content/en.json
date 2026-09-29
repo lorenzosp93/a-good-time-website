@@ -69,7 +69,7 @@
     ],
     [
       "Apple Watch.",
-      "The Apple Watch companion lets you request a suggestion, start a task, and record progress or completion, while your iPhone manages the task list and timing."
+      "The Apple Watch companion lets you request a suggestion, start a task, and record progress or completion, while your iPhone manages the task list and timing. It’s part of the one-time unlock; nudges on your watch stay free."
     ],
     [
       "Progress and reflection.",
@@ -85,6 +85,26 @@
     "Exporting app data is an explicit choice, never an automatic upload."
   ],
   "privacy_note": "If you connect Apple Reminders, linked reminders follow the sync settings of your chosen Apple account. This website uses no analytics or cookies; GitHub provides the hosting. Only share what is needed. Remove task names, calendar details, locations and other personal information from screenshots. Nothing is uploaded automatically. GitHub and your email provider process what you choose to send.",
+  "pricing_eyebrow": "Pricing.",
+  "pricing_title": "Free to use. Pay once if you want more.",
+  "pricing_intro": "Timing, privacy, Apple Reminders and explanations are free for everyone. A single purchase unlocks the rest, with no subscription.",
+  "plan_free_name": "Free",
+  "plan_free_price": "€0",
+  "plan_free_items": [
+    "Up to 8 active tasks, across Personal and Work",
+    "Automatic and on-request suggestions, with reasons",
+    "Calendar, Apple Reminders, places and Screen Time",
+    "Focused sessions, Live Activities and weekly reflection"
+  ],
+  "plan_unlock_name": "One-time unlock",
+  "plan_unlock_price": "€4.99",
+  "plan_unlock_items": [
+    "Unlimited active tasks",
+    "Automatic task details on supported iPhones",
+    "The Apple Watch app",
+    "Accent colors and alternate app icons"
+  ],
+  "pricing_note": "Try everything free for 7 days; nothing is charged when the trial ends. If you go back to the free version, your tasks stay as they are. Prices vary by country, and the App Store shows yours before you buy. Automatic task details need iOS 26 or later and an iPhone with Apple Intelligence.",
   "faq_title": "A few things to know.",
   "faqs": [
     [
@@ -94,6 +114,10 @@
     [
       "What do I need?",
       "You need an iPhone running iOS 18 or later; the app supports English, Italian, and Spanish. Automatic task drafting requires iOS 26 or later with Apple Intelligence available and enabled. You can use the form on other devices, and Apple Watch is optional."
+    ],
+    [
+      "What does it cost?",
+      "A Good Time is free to use with up to 8 active tasks. A one-time purchase of €4.99 unlocks unlimited tasks, automatic task details on supported iPhones, the Apple Watch app and appearance options. There is no subscription."
     ],
     [
       "Do I have to enable every permission?",
@@ -113,6 +137,7 @@
   "closing_intro": "The beta is open if you’d like to see how suggestions work with your own tasks and routine.",
   "closing_note": "The invitation link will appear here when the beta opens.",
   "footer": "Made by",
+  "privacy_full": "Read the full privacy policy",
   "privacy_link": "Privacy",
   "available_note": "Use TestFlight to install the beta on your iPhone.",
   "available_answer": "Yes. Use the TestFlight link on this page to join the beta. Availability may depend on open testing places.",

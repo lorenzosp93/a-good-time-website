@@ -69,7 +69,7 @@
     ],
     [
       "Apple Watch.",
-      "La app para Apple Watch permite pedir una sugerencia, empezar una tarea y registrar avances o su finalización, mientras el iPhone gestiona la lista y los horarios."
+      "La app para Apple Watch permite pedir una sugerencia, empezar una tarea y registrar avances o su finalización, mientras el iPhone gestiona la lista y los horarios. Forma parte del desbloqueo único; los avisos en el reloj siguen siendo gratis."
     ],
     [
       "Progreso y reflexión.",
@@ -85,6 +85,26 @@
     "Exportar datos es una decisión explícita, nunca una subida automática."
   ],
   "privacy_note": "Si conectas Recordatorios de Apple, los recordatorios siguen los ajustes de sincronización de la cuenta de Apple elegida. Este sitio no usa analítica ni cookies; GitHub proporciona el alojamiento. Comparte solo lo necesario. Elimina nombres de tareas, detalles del calendario, ubicaciones y otros datos personales de las capturas. No se sube nada automáticamente. GitHub y tu proveedor de correo procesan lo que decides enviar.",
+  "pricing_eyebrow": "Precios.",
+  "pricing_title": "Gratis de usar. Paga una vez si quieres más.",
+  "pricing_intro": "El momento oportuno, la privacidad, Recordatorios de Apple y las explicaciones son gratis para todos. Una sola compra desbloquea el resto, sin suscripción.",
+  "plan_free_name": "Gratis",
+  "plan_free_price": "0 €",
+  "plan_free_items": [
+    "Hasta 8 tareas activas, entre Personal y Trabajo",
+    "Sugerencias automáticas y a petición, con sus motivos",
+    "Calendario, Recordatorios de Apple, lugares y Tiempo de uso",
+    "Sesiones de concentración, Live Activities y reflexión semanal"
+  ],
+  "plan_unlock_name": "Desbloqueo único",
+  "plan_unlock_price": "4,99 €",
+  "plan_unlock_items": [
+    "Tareas activas ilimitadas",
+    "Detalles automáticos de tareas en los iPhone compatibles",
+    "La app del Apple Watch",
+    "Colores de acento e iconos alternativos"
+  ],
+  "pricing_note": "Pruébalo todo gratis durante 7 días: no se cobra nada cuando termina la prueba. Si vuelves a la versión gratuita, tus tareas no cambian. Los precios varían según el país y el App Store muestra el tuyo antes de comprar. Los detalles automáticos requieren iOS 26 o posterior y un iPhone con Apple Intelligence.",
   "faq_title": "Algunas cosas que conviene saber.",
   "faqs": [
     [
@@ -94,6 +114,10 @@
     [
       "¿Qué necesito?",
       "Necesitas un iPhone con iOS 18 o posterior; la app admite inglés, italiano y español. El borrador automático de tareas requiere iOS 26 o posterior con Apple Intelligence disponible y activada. En otros dispositivos puedes usar el formulario, y Apple Watch es opcional."
+    ],
+    [
+      "¿Cuánto cuesta?",
+      "A Good Time es gratis con hasta 8 tareas activas. Una compra única de 4,99 € desbloquea tareas ilimitadas, los detalles automáticos en los iPhone compatibles, la app del Apple Watch y las opciones de apariencia. No hay suscripción."
     ],
     [
       "¿Tengo que activar todos los permisos?",
@@ -113,6 +137,7 @@
   "closing_intro": "La beta está abierta si quieres ver cómo funcionan las sugerencias con tus tareas y tu rutina.",
   "closing_note": "El enlace de invitación aparecerá aquí cuando abra la beta.",
   "footer": "Creado por",
+  "privacy_full": "Lee la política de privacidad completa",
   "privacy_link": "Privacidad",
   "available_note": "Usa TestFlight para instalar la beta en tu iPhone.",
   "available_answer": "Sí. Usa el enlace de TestFlight de esta página para unirte a la beta. El acceso puede depender de las plazas disponibles.",

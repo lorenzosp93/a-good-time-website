@@ -1,0 +1,91 @@
+{
+  "title": "Privacy Policy",
+  "intro": "A Good Time is built to work on your iPhone and Apple Watch without sending your information to the developer.",
+  "updated_label": "Last updated",
+  "updated": "29 September 2026",
+  "sections": [
+    {
+      "heading": "In short",
+      "paragraphs": [
+        "There is no account, no analytics, no advertising and no server run by the developer. Your tasks, calendar availability, places and suggestion history stay on your devices. The developer cannot see them."
+      ],
+      "items": []
+    },
+    {
+      "heading": "What the app uses on your device",
+      "paragraphs": [
+        "The app stores and uses the following only on your iPhone (and on your paired Apple Watch, if you use it):"
+      ],
+      "items": [
+        "The tasks you add, including titles, estimates, places, due dates and how you respond to suggestions.",
+        "Calendar busy and free times from the calendars you select. The app does not save event titles, descriptions, attendees or locations.",
+        "Reminders you choose to activate, so their title, due date, recurrence, notes and completion stay in sync.",
+        "A Home location, if you set one, to notice when you arrive.",
+        "Apps or categories you pick in Screen Time, if you enable it. The app receives only that a chosen threshold was reached, never which apps you used.",
+        "Your welcome hours, daily maximum and other preferences."
+      ]
+    },
+    {
+      "heading": "What leaves your device",
+      "paragraphs": [
+        "By default, nothing is sent to the developer. Information leaves your device only in these cases:"
+      ],
+      "items": [
+        "Apple Reminders: reminders you link follow the sync settings of your Apple account, as they do without this app.",
+        "Exports: you can export results or diagnostic data through the iOS share sheet. The file is created only when you choose to, and you decide where it goes.",
+        "Purchases: the optional One-time unlock is handled by Apple. The developer does not receive your payment details or identity.",
+        "TestFlight and App Store feedback: if you send feedback through Apple, Apple processes it under its own policies.",
+        "Support: if you email or open a GitHub issue, those services receive what you write. Please remove personal details from anything you share."
+      ]
+    },
+    {
+      "heading": "Permissions",
+      "paragraphs": [
+        "Each permission is optional and requested when the related feature becomes relevant. The app remains useful if you decline."
+      ],
+      "items": [
+        "Calendar: to find free time around your events.",
+        "Reminders: to bring your existing reminders into the app and keep them in sync.",
+        "Location: to set Home and, if you allow it, consider a suggestion when you arrive. Location is not used to build a history or shared with anyone.",
+        "Notifications: to deliver suggestions you have enabled, up to the daily maximum you choose.",
+        "Screen Time (Family Controls): to notice time in apps you associate with procrastination. It is never required."
+      ]
+    },
+    {
+      "heading": "On-device task assistance",
+      "paragraphs": [
+        "On supported devices, automatic task details use Apple’s on-device language model. Your description is processed on your device and is not sent to the developer or to a remote AI service."
+      ],
+      "items": []
+    },
+    {
+      "heading": "This website",
+      "paragraphs": [
+        "This website uses no analytics, cookies or external fonts. It is hosted by GitHub Pages, which may process technical data such as your IP address when you visit, under GitHub’s own privacy statement."
+      ],
+      "items": []
+    },
+    {
+      "heading": "Your choices",
+      "paragraphs": [
+        "You can revoke any permission in iOS Settings at any time, and turn off suggestions in the app. Deleting the app deletes the data it stores on your device. Reminders and calendar events remain in your Apple account, because they belong to you and to Apple apps."
+      ],
+      "items": []
+    },
+    {
+      "heading": "Children",
+      "paragraphs": [
+        "The app collects no personal information from anyone, including children."
+      ],
+      "items": []
+    },
+    {
+      "heading": "Changes and contact",
+      "paragraphs": [
+        "If this policy changes, the date above will change. If the app ever needs to collect information, this page will say so before that happens.",
+        "Questions: support@agoodtime.to."
+      ],
+      "items": []
+    }
+  ]
+}

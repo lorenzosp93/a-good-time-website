@@ -1,0 +1,91 @@
+{
+  "title": "Informativa sulla privacy",
+  "intro": "A Good Time è progettata per funzionare su iPhone e Apple Watch senza inviare le tue informazioni allo sviluppatore.",
+  "updated_label": "Ultimo aggiornamento",
+  "updated": "29 settembre 2026",
+  "sections": [
+    {
+      "heading": "In breve",
+      "paragraphs": [
+        "Non ci sono account, analisi, pubblicità né server gestiti dallo sviluppatore. Attività, disponibilità del calendario, luoghi e cronologia dei suggerimenti restano sui tuoi dispositivi. Lo sviluppatore non può vederli."
+      ],
+      "items": []
+    },
+    {
+      "heading": "Cosa usa l’app sul tuo dispositivo",
+      "paragraphs": [
+        "L’app salva e usa quanto segue solo sul tuo iPhone (e sull’Apple Watch abbinato, se lo usi):"
+      ],
+      "items": [
+        "Le attività che aggiungi, con titoli, stime, luoghi, scadenze e il modo in cui rispondi ai suggerimenti.",
+        "Gli orari occupati e liberi dei calendari che selezioni. L’app non salva titoli, descrizioni, partecipanti o luoghi degli eventi.",
+        "I promemoria che scegli di attivare, per mantenere sincronizzati titolo, scadenza, ricorrenza, note e completamento.",
+        "Una posizione Casa, se ne imposti una, per rilevare quando arrivi.",
+        "Le app o le categorie scelte in Tempo di utilizzo, se lo attivi. L’app riceve solo l’informazione che una soglia scelta è stata raggiunta, mai quali app hai usato.",
+        "Gli orari graditi, il massimo giornaliero e le altre preferenze."
+      ]
+    },
+    {
+      "heading": "Cosa esce dal tuo dispositivo",
+      "paragraphs": [
+        "Per impostazione predefinita, nulla viene inviato allo sviluppatore. Le informazioni lasciano il dispositivo solo in questi casi:"
+      ],
+      "items": [
+        "Promemoria di Apple: i promemoria collegati seguono le impostazioni di sincronizzazione del tuo account Apple, come accade anche senza questa app.",
+        "Esportazioni: puoi esportare risultati o dati diagnostici con il foglio di condivisione di iOS. Il file viene creato solo quando lo scegli e decidi tu dove inviarlo.",
+        "Acquisti: lo Sblocco una tantum opzionale è gestito da Apple. Lo sviluppatore non riceve i tuoi dati di pagamento né la tua identità.",
+        "Feedback di TestFlight e App Store: se invii feedback tramite Apple, Apple lo tratta secondo le proprie informative.",
+        "Assistenza: se scrivi un’email o apri una segnalazione su GitHub, quei servizi ricevono ciò che scrivi. Rimuovi i dati personali da ciò che condividi."
+      ]
+    },
+    {
+      "heading": "Autorizzazioni",
+      "paragraphs": [
+        "Ogni autorizzazione è facoltativa e richiesta quando la funzione diventa rilevante. L’app resta utile se rifiuti."
+      ],
+      "items": [
+        "Calendario: per trovare tempo libero tra i tuoi eventi.",
+        "Promemoria: per portare nell’app i promemoria esistenti e mantenerli sincronizzati.",
+        "Posizione: per impostare Casa e, se lo consenti, valutare un suggerimento quando arrivi. La posizione non viene usata per creare una cronologia né condivisa con nessuno.",
+        "Notifiche: per consegnare i suggerimenti che hai attivato, entro il massimo giornaliero che scegli.",
+        "Tempo di utilizzo (Family Controls): per rilevare il tempo passato nelle app che associ alla procrastinazione. Non è mai obbligatorio."
+      ]
+    },
+    {
+      "heading": "Assistenza alle attività sul dispositivo",
+      "paragraphs": [
+        "Sui dispositivi compatibili, i dettagli automatici delle attività usano il modello linguistico di Apple sul dispositivo. La tua descrizione viene elaborata sul dispositivo e non viene inviata allo sviluppatore né a un servizio di IA remoto."
+      ],
+      "items": []
+    },
+    {
+      "heading": "Questo sito web",
+      "paragraphs": [
+        "Questo sito non usa analisi, cookie né caratteri esterni. È ospitato da GitHub Pages, che può trattare dati tecnici come il tuo indirizzo IP quando lo visiti, secondo l’informativa di GitHub."
+      ],
+      "items": []
+    },
+    {
+      "heading": "Le tue scelte",
+      "paragraphs": [
+        "Puoi revocare qualsiasi autorizzazione nelle Impostazioni di iOS in qualsiasi momento e disattivare i suggerimenti nell’app. Eliminando l’app elimini i dati che salva sul dispositivo. Promemoria ed eventi del calendario restano nel tuo account Apple, perché appartengono a te e alle app di Apple."
+      ],
+      "items": []
+    },
+    {
+      "heading": "Minori",
+      "paragraphs": [
+        "L’app non raccoglie informazioni personali da nessuno, minori compresi."
+      ],
+      "items": []
+    },
+    {
+      "heading": "Modifiche e contatti",
+      "paragraphs": [
+        "Se questa informativa cambia, cambierà la data qui sopra. Se in futuro l’app dovesse raccogliere informazioni, questa pagina lo dirà prima che accada.",
+        "Domande: support@agoodtime.to."
+      ],
+      "items": []
+    }
+  ]
+}

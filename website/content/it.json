@@ -69,7 +69,7 @@
     ],
     [
       "Apple Watch.",
-      "L’app per Apple Watch permette di chiedere un suggerimento, iniziare un’attività e registrare progressi o completamento, mentre iPhone gestisce la lista e la tempistica."
+      "L’app per Apple Watch permette di chiedere un suggerimento, iniziare un’attività e registrare progressi o completamento, mentre iPhone gestisce la lista e la tempistica. Fa parte dello sblocco una tantum; i suggerimenti sull’orologio restano gratuiti."
     ],
     [
       "Progressi e riflessione.",
@@ -85,6 +85,26 @@
     "L’esportazione dei dati è una scelta esplicita, mai un caricamento automatico."
   ],
   "privacy_note": "Se colleghi Promemoria Apple, i promemoria seguono le impostazioni di sincronizzazione dell’account Apple scelto. Questo sito non usa strumenti di analisi o cookie; è ospitato da GitHub. Condividi solo ciò che serve. Rimuovi nomi delle attività, dettagli del calendario, luoghi e altre informazioni personali dalle schermate. Nulla viene caricato automaticamente. GitHub e il tuo provider email elaborano ciò che scegli di inviare.",
+  "pricing_eyebrow": "Prezzi.",
+  "pricing_title": "Gratuita da usare. Paghi una volta se vuoi di più.",
+  "pricing_intro": "Tempismo, privacy, Promemoria di Apple e spiegazioni sono gratuiti per tutti. Un unico acquisto sblocca il resto, senza abbonamento.",
+  "plan_free_name": "Gratuita",
+  "plan_free_price": "0 €",
+  "plan_free_items": [
+    "Fino a 8 attività attive, tra Personale e Lavoro",
+    "Suggerimenti automatici e su richiesta, con le motivazioni",
+    "Calendario, Promemoria di Apple, luoghi e Tempo di utilizzo",
+    "Sessioni di concentrazione, Live Activity e riflessione settimanale"
+  ],
+  "plan_unlock_name": "Sblocco una tantum",
+  "plan_unlock_price": "4,99 €",
+  "plan_unlock_items": [
+    "Attività attive illimitate",
+    "Dettagli automatici delle attività sugli iPhone supportati",
+    "L’app per Apple Watch",
+    "Colori di evidenziazione e icone alternative"
+  ],
+  "pricing_note": "Prova tutto gratis per 7 giorni: alla fine della prova non viene addebitato nulla. Se torni alla versione gratuita, le tue attività restano invariate. I prezzi variano in base al Paese e l’App Store mostra il tuo prima dell’acquisto. I dettagli automatici richiedono iOS 26 o versioni successive e un iPhone con Apple Intelligence.",
   "faq_title": "Qualche informazione utile.",
   "faqs": [
     [
@@ -94,6 +114,10 @@
     [
       "Di cosa ho bisogno?",
       "Serve un iPhone con iOS 18 o successivo; l’app supporta inglese, italiano e spagnolo. La compilazione automatica delle attività richiede iOS 26 o successivo con Apple Intelligence disponibile e attiva. Sugli altri dispositivi puoi usare il modulo, mentre Apple Watch è facoltativo."
+    ],
+    [
+      "Quanto costa?",
+      "A Good Time è gratuita con fino a 8 attività attive. Un acquisto una tantum di 4,99 € sblocca attività illimitate, i dettagli automatici sugli iPhone supportati, l’app per Apple Watch e le opzioni di aspetto. Non c’è alcun abbonamento."
     ],
     [
       "Devo concedere tutti i permessi?",
@@ -113,6 +137,7 @@
   "closing_intro": "La beta è aperta se vuoi vedere come funzionano i suggerimenti con le tue attività e la tua routine.",
   "closing_note": "Il link di invito apparirà qui quando aprirà la beta.",
   "footer": "Creato da",
+  "privacy_full": "Leggi l’informativa completa sulla privacy",
   "privacy_link": "Privacy",
   "available_note": "Usa TestFlight per installare la beta sul tuo iPhone.",
   "available_answer": "Sì. Usa il link TestFlight su questa pagina per partecipare alla beta. L’accesso può dipendere dai posti disponibili.",

@@ -374,6 +374,53 @@ figcaption {
 .privacy-copy li::marker {
   color:var(--green);
 }
+.pricing {
+  padding-block:85px;
+  background:var(--wash);
+}
+.plans {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+.plan {
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:30px 32px 26px;
+}
+.plan-featured {
+  border-color:var(--green);
+  box-shadow:inset 0 3px 0 var(--coral);
+}
+.plan h3 {
+  font-size:19px;
+  font-weight:550;
+  margin:0;
+}
+.plan-price {
+  font-family:var(--serif);
+  font-size:40px;
+  line-height:1.1;
+  margin:10px 0 18px;
+}
+.plan ul {
+  padding-left:19px;
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+}
+.plan li {
+  padding-left:5px;
+  margin-top:10px;
+}
+.plan li::marker {
+  color:var(--green);
+}
+.pricing-note {
+  max-width:760px;
+  margin-top:28px;
+}
 .faq {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -587,6 +634,9 @@ figcaption {
   .feature p {
     font-size:13px;
   }
+  .plans {
+    grid-template-columns:1fr;
+  }
   .privacy,.faq {
     grid-template-columns:1fr;
     padding-block:60px;
@@ -698,3 +748,12 @@ figcaption {
 }
 
 .brand picture { display:block; flex-shrink:0; }
+
+/* Privacy policy: long-form text in the site's typography. */
+.policy-body { max-width: 720px; padding-bottom: 60px; }
+.policy-body section { padding-block: 28px; border-top: 1px solid var(--line); }
+.policy-body h2 { font-size: clamp(24px, 3.4vw, 30px); letter-spacing: -.03em; margin-bottom: 14px; }
+.policy-body p, .policy-body li { margin-bottom: 12px; }
+.policy-body ul { padding-left: 1.25em; }
+.site-footer [aria-current="page"] { text-decoration: underline; }
+.privacy-full { font-weight: 550; text-decoration: underline; text-underline-offset: 3px; }

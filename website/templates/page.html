@@ -53,11 +53,15 @@
     </section>
     <section class="privacy wrap" id="privacy" aria-labelledby="privacy-title">
       <div><p class="eyebrow">$privacy_eyebrow</p><h2 id="privacy-title">$privacy_title</h2></div>
-      <div class="privacy-copy"><p>$privacy_intro</p><ul>$privacy_points</ul><p class="small-note">$privacy_note</p></div>
+      <div class="privacy-copy"><p>$privacy_intro</p><ul>$privacy_points</ul><p class="small-note">$privacy_note</p><p><a class="privacy-full" href="${base}/${lang}/privacy/">$privacy_full</a></p></div>
+    </section>
+    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="wrap"><div class="section-intro"><p class="eyebrow">$pricing_eyebrow</p><h2 id="pricing-title">$pricing_title</h2><p>$pricing_intro</p></div>
+      <div class="plans">$plans</div><p class="small-note pricing-note">$pricing_note</p></div>
     </section>
     <section class="faq wrap" aria-labelledby="faq-title"><h2 id="faq-title">$faq_title</h2><div>$faqs</div></section>
     <section class="closing wrap" aria-labelledby="closing-title"><p class="eyebrow">$closing_eyebrow</p><h2 id="closing-title">$closing_title</h2><p>$closing_intro</p>$cta<p class="small-note">$closing_note</p></section>
   </main>
-  <footer class="site-footer wrap"><a class="brand" href="${base}/${lang}/"><picture><source media="(prefers-color-scheme: dark)" srcset="${base}/assets/app-icon-dark.png"><img src="${base}/assets/app-icon-small.png" width="32" height="32" alt=""></picture><span>A Good Time</span></a><p>$footer <a href="https://lorenzosp.com">Lorenzo Spinelli</a>.</p><nav class="footer-links" aria-label="$support_link"><a href="${base}/${lang}/support/">$support_link</a><a href="#privacy">$privacy_link</a></nav></footer>
+  <footer class="site-footer wrap"><a class="brand" href="${base}/${lang}/"><picture><source media="(prefers-color-scheme: dark)" srcset="${base}/assets/app-icon-dark.png"><img src="${base}/assets/app-icon-small.png" width="32" height="32" alt=""></picture><span>A Good Time</span></a><p>$footer <a href="https://lorenzosp.com">Lorenzo Spinelli</a>.</p><nav class="footer-links" aria-label="$support_link"><a href="${base}/${lang}/support/">$support_link</a><a href="${base}/${lang}/privacy/">$privacy_link</a></nav></footer>
 </body>
 </html>

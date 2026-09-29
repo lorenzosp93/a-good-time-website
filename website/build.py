@@ -41,6 +41,41 @@ def load_content():
     return content
 
 
+def load_privacy():
+    content = {lang: json.loads((ROOT / "content" / f"privacy-{lang}.json").read_text()) for lang in LANGUAGES}
+    expected = shape(content["en"])
+    for lang, values in content.items():
+        if shape(values) != expected:
+            raise ValueError(f"Incomplete privacy translation structure: {lang}")
+    return content
+
+
+def render_privacy(lang, values, common, config, base):
+    e = escape
+    data = {key: e(value) for key, value in values.items() if isinstance(value, str)}
+    site = config["site_url"].rstrip("/")
+    data["styles"] = (ROOT / "assets/style.css").read_text()
+    data.update(lang=lang, base=e(base), canonical=e(f"{site}/{lang}/privacy/"), skip=e(common["skip"]),
+                language_label=e(common["language_label"]), privacy_link=e(common["privacy_link"]),
+                support_link=e(common["support_link"]))
+    data["alternates"] = "\n  ".join(
+        f'<link rel="alternate" hreflang="{code}" href="{e(site)}/{code}/privacy/">' for code in LANGUAGES
+    ) + f'\n  <link rel="alternate" hreflang="x-default" href="{e(site)}/en/privacy/">'
+    data["languages"] = "".join(
+        f'<a href="{e(base)}/{code}/privacy/" lang="{code}" hreflang="{code}" aria-label="{name}"'
+        + (' aria-current="page"' if code == lang else "") + f'>{code.upper()}</a>' for code, name in LANGUAGES.items()
+    )
+    sections = []
+    for section in values["sections"]:
+        body = "".join(f"<p>{e(text)}</p>" for text in section["paragraphs"][:1])
+        if section["items"]:
+            body += "<ul>" + "".join(f"<li>{e(item)}</li>" for item in section["items"]) + "</ul>"
+        body += "".join(f"<p>{e(text)}</p>" for text in section["paragraphs"][1:])
+        sections.append(f'<section><h2>{e(section["heading"])}</h2>{body}</section>')
+    data["sections"] = "".join(sections)
+    return Template((ROOT / "templates/privacy.html").read_text()).substitute(data)
+
+
 def validate_config(config):
     site = urlsplit(config["site_url"])
     if site.scheme != "https" or not site.netloc or site.query or site.fragment:
@@ -99,6 +134,11 @@ def render(lang, values, config, base):
         f'<h3>{e(title)}</h3><p>{e(body)}</p></article>'
         for index, (title, body) in enumerate(values["features"], 1)
     )
+    def plan(kind, featured=False):
+        items = "".join(f"<li>{e(item)}</li>" for item in values[f"plan_{kind}_items"])
+        return (f'<article class="plan{" plan-featured" if featured else ""}"><h3>{e(values[f"plan_{kind}_name"])}</h3>'
+                f'<p class="plan-price">{e(values[f"plan_{kind}_price"])}</p><ul>{items}</ul></article>')
+    data["plans"] = plan("free") + plan("unlock", featured=True)
     data["privacy_points"] = "".join(f"<li>{e(point)}</li>" for point in values["privacy_points"])
     faqs = [list(faq) for faq in values["faqs"]]
     if config["testflight_url"]:
@@ -116,6 +156,7 @@ def build(output=None, config=None, base_path=None):
         raise ValueError("base path must contain only URL path segments")
     content = load_content()
     support_content = load_support()
+    privacy_content = load_privacy()
     # Explicit asset allowlist: no app sources, documents, test exports or personal data.
     assets = ["app-icon-small.png", "app-icon-dark.png", "style.css", "motion.js", "support.js"] + [f"screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS]
     assets += [f"demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)]
@@ -124,6 +165,7 @@ def build(output=None, config=None, base_path=None):
             raise FileNotFoundError(f"Missing public asset: {asset}")
     allowed = {"index.html", ".nojekyll"} | {f"{lang}/index.html" for lang in LANGUAGES} | {f"assets/{asset}" for asset in assets}
     allowed |= {"support/index.html"} | {f"{lang}/support/index.html" for lang in LANGUAGES}
+    allowed |= {"privacy/index.html"} | {f"{lang}/privacy/index.html" for lang in LANGUAGES}
     existing = {str(path.relative_to(output)) for path in output.rglob("*") if path.is_file()}
     legacy = {"assets/app-icon.png"} | {f"assets/screenshots/{lang}-{screen}.png" for lang in LANGUAGES for screen in SCREENS}
     if existing - allowed - legacy:
@@ -142,6 +184,9 @@ def build(output=None, config=None, base_path=None):
     for route, lang in [("support", "en")] + [(f"{lang}/support", lang) for lang in LANGUAGES]:
         (output / route).mkdir(parents=True, exist_ok=True)
         (output / route / "index.html").write_text(render_support(lang, support_content[lang], content[lang], config, base), encoding="utf-8")
+    for route, lang in [("privacy", "en")] + [(f"{lang}/privacy", lang) for lang in LANGUAGES]:
+        (output / route).mkdir(parents=True, exist_ok=True)
+        (output / route / "index.html").write_text(render_privacy(lang, privacy_content[lang], content[lang], config, base), encoding="utf-8")
     (output / ".nojekyll").touch()
     return output
 

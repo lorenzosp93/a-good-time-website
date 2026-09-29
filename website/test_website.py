@@ -36,7 +36,11 @@ class WebsiteTests(unittest.TestCase):
                 elements = page.elements
                 self.assertEqual(next(attrs["lang"] for tag, attrs in elements if tag == "html"), language)
                 self.assertEqual(sum(tag == "h1" for tag, _ in elements), 1)
-                self.assertEqual(sum(tag == "details" for tag, _ in elements), 5)
+                self.assertEqual(sum(tag == "details" for tag, _ in elements), 6)
+                # Two plans, the one-time unlock highlighted, with its price.
+                self.assertEqual(sum(tag == "article" and "plan" in attrs.get("class", "").split() for tag, attrs in elements), 2)
+                self.assertEqual(sum(tag == "article" and "plan-featured" in attrs.get("class", "").split() for tag, attrs in elements), 1)
+                self.assertIn("4.99" if language == "en" else "4,99", text)
                 self.assertTrue(any(tag == "meta" and attrs.get("name") == "description" and attrs.get("content") for tag, attrs in elements))
                 self.assertEqual(sum(tag == "link" and attrs.get("rel") == "alternate" for tag, attrs in elements), 4)
                 self.assertTrue(any(tag == "a" and attrs.get("href") == "https://lorenzosp.com" for tag, attrs in elements))
@@ -82,12 +86,13 @@ class WebsiteTests(unittest.TestCase):
         expected |= {f"assets/screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS}
         expected |= {f"assets/demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)}
         expected |= {"assets/support.js", "support/index.html"} | {f"{lang}/support/index.html" for lang in LANGUAGES}
+        expected |= {"privacy/index.html"} | {f"{lang}/privacy/index.html" for lang in LANGUAGES}
         actual = {str(path.relative_to(self.output)) for path in self.output.rglob("*") if path.is_file()}
         self.assertEqual(actual, expected)
 
     def test_performance_and_canonical_contracts(self):
         build(self.output, config=self.config)
-        for route in ("", "en/", "it/", "es/", "support/", "en/support/", "it/support/", "es/support/"):
+        for route in ("", "en/", "it/", "es/", "support/", "en/support/", "it/support/", "es/support/", "privacy/", "en/privacy/", "it/privacy/", "es/privacy/"):
             elements = Page((self.output / route / "index.html").read_text()).elements
             canonical = next(a["href"] for t, a in elements if t == "link" and a.get("rel") == "canonical")
             alternates = {a["href"] for t, a in elements if t == "link" and a.get("rel") == "alternate"}
