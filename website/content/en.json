@@ -6,10 +6,9 @@
   "eyebrow": "Tasks, when you have time for them.",
   "headline": "Make room for the things you keep meaning to do.",
   "intro": "Whether you want to read a chapter or get something done around the house, A Good Time suggests tasks from your list that fit your available time and where you are.",
-  "cta_soon": "TestFlight coming soon",
-  "cta_join": "Join the TestFlight beta",
+  "cta_download": "Download on the App Store",
   "how_link": "See how it works",
-  "hero_note": "An early beta for iPhone · iOS 18 or later",
+  "hero_note": "Free on the App Store · iPhone with iOS 18 or later",
   "now_alt": "A Good Time’s Now screen suggesting Read a chapter, with its estimated time, a reason, and a Start button.",
   "hero_caption": "A suggestion with an explanation of why it fits.",
   "principles_label": "Made with your day in mind",
@@ -108,8 +107,8 @@
   "faq_title": "A few things to know.",
   "faqs": [
     [
-      "Can I try it yet?",
-      "The TestFlight invitation isn’t available yet. This page will link directly to the beta when it opens. There’s no email signup."
+      "Where can I get it?",
+      "A Good Time is on the App Store for iPhone with iOS 18 or later. It’s free to download, and the one-time unlock is optional."
     ],
     [
       "What do I need?",
@@ -128,19 +127,18 @@
       "It aims to find suitable moments, but suggestions depend on available context and iOS background delivery. A nudge isn’t guaranteed. You can always open the app, choose a task, or ask it to check what fits."
     ],
     [
-      "What should I expect from the beta?",
-      "The app is still being tested, so you may encounter bugs and changes to how suggestions work. If you’re interested in comparing timing approaches, there is also a separate, optional personal experiment in the app."
+      "How can I share feedback?",
+      "Use the Support page to report a problem or suggest an improvement, publicly or by email. You can also rate or review A Good Time on the App Store."
     ]
   ],
-  "closing_eyebrow": "A Good Time · early beta",
+  "closing_eyebrow": "A Good Time · on the App Store",
   "closing_title": "Try A Good Time.",
-  "closing_intro": "The beta is open if you’d like to see how suggestions work with your own tasks and routine.",
-  "closing_note": "The invitation link will appear here when the beta opens.",
+  "closing_intro": "Download it free and see how suggestions work with your own tasks and routine.",
+  "closing_note": "Free to download. The optional one-time unlock is offered in the app, with your local price.",
+  "apple_legal": "Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.",
   "footer": "Made by",
   "privacy_full": "Read the full privacy policy",
   "privacy_link": "Privacy",
-  "available_note": "Use TestFlight to install the beta on your iPhone.",
-  "available_answer": "Yes. Use the TestFlight link on this page to join the beta. Availability may depend on open testing places.",
   "completion_alt": "A practice nudge arrives and opens on Now with its reason. The task is started, shown as a Live Activity, reopened and completed.",
   "capture_motion_alt": "A real iPhone recording showing keyboard dictation and an editable task draft filled from the description.",
   "play_demo": "Play animation",

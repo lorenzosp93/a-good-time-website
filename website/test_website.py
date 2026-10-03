@@ -1,4 +1,4 @@
-"""Public output contracts: routes, assets, translations, and invitation state."""
+"""Public output contracts: routes, assets, translations, and the App Store link."""
 from html.parser import HTMLParser
 import json
 from pathlib import Path
@@ -27,10 +27,10 @@ class WebsiteTests(unittest.TestCase):
         self.output = Path(self.directory.name)
         self.config = json.loads((ROOT / "config.json").read_text())
 
-    def check_output(self, base, enabled):
+    def check_output(self, base):
         build(self.output, config=self.config, base_path=base)
         for route, language in [("", "en")] + [(lang, lang) for lang in LANGUAGES]:
-            with self.subTest(route=route, enabled=enabled):
+            with self.subTest(route=route):
                 text = (self.output / route / "index.html").read_text()
                 page = Page(text)
                 elements = page.elements
@@ -54,13 +54,9 @@ class WebsiteTests(unittest.TestCase):
                         self.assertIn("alt", attrs)
                         self.assertIn("width", attrs)
                         self.assertIn("height", attrs)
-                    if attrs.get("class") == "cta":
-                        self.assertEqual(tag, "a" if enabled else "button")
-                        if enabled:
-                            self.assertEqual(attrs["href"], self.config["testflight_url"])
-                        else:
-                            self.assertIn("disabled", attrs)
-                            self.assertNotIn("href", attrs)
+                    if attrs.get("class") == "store-badge":
+                        self.assertEqual(tag, "a")
+                        self.assertEqual(attrs["href"], self.config["app_store_url"])
                     for attribute in ("href", "src", "poster", "data-src"):
                         if attribute not in attrs:
                             continue
@@ -76,13 +72,11 @@ class WebsiteTests(unittest.TestCase):
                             if url.path.endswith("/"):
                                 target /= "index.html"
                             self.assertTrue(target.is_file(), f"Broken {attribute}: {attrs[attribute]}")
-                self.assertEqual(sum(attrs.get("class") == "cta" for _, attrs in elements), 2)
-                copy = load_content()[language]
-                if enabled:
-                    self.assertNotIn(copy["cta_soon"], text)
-                    self.assertNotIn(copy["closing_note"], text)
+                self.assertEqual(sum(attrs.get("class") == "store-badge" for _, attrs in elements), 2)
+                self.assertNotIn("TestFlight", text)
         expected = {"index.html", ".nojekyll", "assets/style.css", "assets/motion.js", "assets/app-icon-small.png", "assets/app-icon-dark.png"}
         expected |= {f"{lang}/index.html" for lang in LANGUAGES}
+        expected |= {f"assets/badges/app-store-{lang}.svg" for lang in LANGUAGES}
         expected |= {f"assets/screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS}
         expected |= {f"assets/demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)}
         expected |= {"assets/support.js", "support/index.html"} | {f"{lang}/support/index.html" for lang in LANGUAGES}
@@ -167,31 +161,25 @@ class WebsiteTests(unittest.TestCase):
                 self.assertTrue(actual.is_file(), f"Missing exported form: {expected.name}")
                 self.assertEqual(json.loads(actual.read_text()), json.loads(expected.read_text()), f"Stale exported form: {expected.name}")
 
-    def test_coming_soon_on_github_project_path(self):
-        self.config["testflight_url"] = ""
-        self.check_output("/a-good-time", False)
-
-    def test_invitation_on_github_project_path(self):
-        self.config["testflight_url"] = "https://testflight.apple.com/join/Example1"
-        self.check_output("/a-good-time", True)
+    def test_github_project_path(self):
+        self.check_output("/a-good-time")
 
     def test_local_preview(self):
-        self.config["testflight_url"] = ""
-        self.check_output("", False)
+        self.check_output("")
 
     def test_public_repository_path(self):
-        self.config["testflight_url"] = ""
-        self.check_output(urlsplit(self.config["site_url"]).path.rstrip("/"), False)
+        self.check_output(urlsplit(self.config["site_url"]).path.rstrip("/"))
 
     def test_unexpected_output_file_is_not_published(self):
         (self.output / "private-notes.txt").write_text("Not public")
         with self.assertRaises(ValueError):
             build(self.output, config=self.config)
 
-    def test_invalid_invitation_rejected(self):
-        for invitation in ("#", "javascript:alert(1)", "https://example.com", "http://testflight.apple.com/join/test"):
-            with self.subTest(invitation=invitation):
-                self.config["testflight_url"] = invitation
+    def test_invalid_app_store_url_rejected(self):
+        for url in ("", "#", "javascript:alert(1)", "https://example.com", "http://apps.apple.com/app/a-good-time/id1",
+                    "https://testflight.apple.com/join/test"):
+            with self.subTest(url=url):
+                self.config["app_store_url"] = url
                 with self.assertRaises(ValueError):
                     build(self.output, config=self.config)
 

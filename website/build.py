@@ -80,9 +80,8 @@ def validate_config(config):
     site = urlsplit(config["site_url"])
     if site.scheme != "https" or not site.netloc or site.query or site.fragment:
         raise ValueError("site_url must be an absolute HTTPS URL without query or fragment")
-    invitation = config["testflight_url"]
-    if invitation and not re.fullmatch(r"https://testflight\.apple\.com/join/[A-Za-z0-9]+", invitation):
-        raise ValueError("testflight_url must be empty or an HTTPS TestFlight public invitation")
+    if not re.fullmatch(r"https://apps\.apple\.com/(?:[a-z]{2}/)?app/[a-z0-9-]+/id[0-9]+", config["app_store_url"]):
+        raise ValueError("app_store_url must be an HTTPS App Store product URL")
 
 
 def render(lang, values, config, base):
@@ -100,14 +99,9 @@ def render(lang, values, config, base):
         f' aria-label="{name}"' + (' aria-current="page"' if language == lang else '')
         + f'>{language.upper()}</a>' for language, name in LANGUAGES.items()
     )
-    data["cta"] = (
-        f'<a class="cta" href="{e(config["testflight_url"])}">{e(values["cta_join"])}</a>'
-        if config["testflight_url"] else
-        f'<button class="cta" type="button" disabled>{e(values["cta_soon"])}</button>'
-    )
-    # Invitation availability changes the surrounding copy too, not only the button.
-    if config["testflight_url"]:
-        data["closing_note"] = e(values["available_note"])
+    # Apple's official badge artwork, unmodified; the black badge is Apple's preferred version.
+    data["cta"] = (f'<a class="store-badge" href="{e(config["app_store_url"])}">'
+                   f'<img src="{e(base)}/assets/badges/app-store-{lang}.svg" alt="{e(values["cta_download"])}" width="144" height="48"></a>')
     data["principles"] = "".join(f"<span>{e(text)}</span>" for text in values["principles"])
     def story_media(story):
         source = f'{e(base)}/assets/screenshots/{lang}-{story["screen"]}.webp'
@@ -140,10 +134,7 @@ def render(lang, values, config, base):
                 f'<p class="plan-price">{e(values[f"plan_{kind}_price"])}</p><ul>{items}</ul></article>')
     data["plans"] = plan("free") + plan("unlock", featured=True)
     data["privacy_points"] = "".join(f"<li>{e(point)}</li>" for point in values["privacy_points"])
-    faqs = [list(faq) for faq in values["faqs"]]
-    if config["testflight_url"]:
-        faqs[0][1] = values["available_answer"]
-    data["faqs"] = "".join(f'<details><summary>{e(question)}</summary><p>{e(answer)}</p></details>' for question, answer in faqs)
+    data["faqs"] = "".join(f'<details><summary>{e(question)}</summary><p>{e(answer)}</p></details>' for question, answer in values["faqs"])
     return Template((ROOT / "templates/page.html").read_text()).substitute(data)
 
 
@@ -158,7 +149,7 @@ def build(output=None, config=None, base_path=None):
     support_content = load_support()
     privacy_content = load_privacy()
     # Explicit asset allowlist: no app sources, documents, test exports or personal data.
-    assets = ["app-icon-small.png", "app-icon-dark.png", "style.css", "motion.js", "support.js"] + [f"screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS]
+    assets = ["app-icon-small.png", "app-icon-dark.png", "style.css", "motion.js", "support.js"] + [f"badges/app-store-{lang}.svg" for lang in LANGUAGES] + [f"screenshots/{lang}-{screen}.webp" for lang in LANGUAGES for screen in SCREENS]
     assets += [f"demos/{lang}-{screen}.mp4" for lang in LANGUAGES for screen in motion_screens(lang)]
     for asset in assets:
         if not (ROOT / "assets" / asset).is_file():

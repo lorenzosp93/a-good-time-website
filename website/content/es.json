@@ -6,10 +6,9 @@
   "eyebrow": "Tus tareas, cuando tienes tiempo.",
   "headline": "Haz espacio para eso que siempre dejas para luego.",
   "intro": "Tanto si quieres leer un capítulo como hacer algo en casa, A Good Time te propone tareas de tu lista según el tiempo que tienes y el lugar donde estás.",
-  "cta_soon": "Próximamente en TestFlight",
-  "cta_join": "Únete a la beta en TestFlight",
+  "cta_download": "Descargar en App Store",
   "how_link": "Descubre cómo funciona",
-  "hero_note": "Una primera beta para iPhone · iOS 18 o posterior",
+  "hero_note": "Gratis en App Store · iPhone con iOS 18 o posterior",
   "now_alt": "La pantalla Ahora de A Good Time sugiere Leer un capítulo, con duración estimada, motivo y botón Iniciar.",
   "hero_caption": "Una sugerencia con una explicación de por qué encaja.",
   "principles_label": "Pensada para tu día",
@@ -108,8 +107,8 @@
   "faq_title": "Algunas cosas que conviene saber.",
   "faqs": [
     [
-      "¿Puedo probarla ya?",
-      "La invitación de TestFlight aún no está disponible. Cuando abra la beta, esta página tendrá el enlace directo. No hay registro por correo electrónico."
+      "¿Dónde puedo conseguirla?",
+      "A Good Time está en App Store para iPhone con iOS 18 o posterior. La descarga es gratuita y el desbloqueo único es opcional."
     ],
     [
       "¿Qué necesito?",
@@ -128,19 +127,18 @@
       "Busca momentos apropiados, pero las sugerencias dependen del contexto disponible y de la ejecución en segundo plano de iOS. No se garantiza un aviso. Siempre puedes abrir la app, elegir una tarea o pedir que compruebe qué encaja."
     ],
     [
-      "¿Qué puedo esperar de la beta?",
-      "La app sigue en pruebas, por lo que puedes encontrar errores y cambios en el funcionamiento de las sugerencias. Si te interesa comparar distintos enfoques de horarios, también hay un experimento personal independiente y opcional en la app."
+      "¿Cómo puedo enviar comentarios?",
+      "Usa la página de Soporte para informar de un problema o proponer una mejora, de forma pública o por correo. También puedes valorar o reseñar A Good Time en App Store."
     ]
   ],
-  "closing_eyebrow": "A Good Time · primera beta",
+  "closing_eyebrow": "A Good Time · en App Store",
   "closing_title": "Prueba A Good Time.",
-  "closing_intro": "La beta está abierta si quieres ver cómo funcionan las sugerencias con tus tareas y tu rutina.",
-  "closing_note": "El enlace de invitación aparecerá aquí cuando abra la beta.",
+  "closing_intro": "Descárgala gratis y descubre cómo funcionan las sugerencias con tus tareas y tu rutina.",
+  "closing_note": "Descarga gratuita. El desbloqueo único opcional está disponible en la app, con el precio de tu país.",
+  "apple_legal": "Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.",
   "footer": "Creado por",
   "privacy_full": "Lee la política de privacidad completa",
   "privacy_link": "Privacidad",
-  "available_note": "Usa TestFlight para instalar la beta en tu iPhone.",
-  "available_answer": "Sí. Usa el enlace de TestFlight de esta página para unirte a la beta. El acceso puede depender de las plazas disponibles.",
   "completion_alt": "Llega una sugerencia de ejemplo y se abre en Ahora con su motivo: se inicia la tarea, aparece como Actividad en directo y se vuelve a abrir para completarla.",
   "capture_motion_alt": "Una grabación real en iPhone muestra el dictado y un borrador editable rellenado a partir de la descripción.",
   "play_demo": "Reproducir animación",

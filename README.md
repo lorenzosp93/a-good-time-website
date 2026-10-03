@@ -16,8 +16,8 @@ Edit translations in `website/content/`, shared markup in
 `website/templates/page.html`, and styles in `website/assets/style.css`.
 Use `python3 website/build.py` for the production URL prefix.
 
-Set `testflight_url` in `website/config.json` to the real HTTPS TestFlight
-invitation when the beta opens. Buttons and availability copy update together.
+`app_store_url` in `website/config.json` is the country-neutral App Store
+product page used by both download buttons.
 
 The Website workflow checks changes and deploys the default branch to GitHub
 Pages. Pages must use GitHub Actions as its source. Only `website/dist` is

@@ -34,6 +34,13 @@ document.querySelectorAll('.demo').forEach((demo) => {
     wantsPlayback = true;
     play();
   });
+  // Buffer the clip before it is on screen so playback starts without a stall.
+  new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting) && !reducedMotion.matches && !video.src) {
+      video.preload = 'auto';
+      video.src = video.dataset.src;
+    }
+  }, { rootMargin: '100% 0px' }).observe(demo);
   const observer = new IntersectionObserver((entries) => {
     const entry = entries[entries.length - 1];
     visible = entry.isIntersecting && entry.intersectionRatio >= 0.35;

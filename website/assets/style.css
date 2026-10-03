@@ -180,10 +180,6 @@ p {
   text-decoration:none;
   text-align:center;
 }
-.cta:disabled {
-  cursor:default;
-  opacity:1;
-}
 .cta[href]:hover {
   background:var(--button-hover);
 }
@@ -757,3 +753,10 @@ figcaption {
 .policy-body ul { padding-left: 1.25em; }
 .site-footer [aria-current="page"] { text-decoration: underline; }
 .privacy-full { font-weight: 550; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Official App Store badge: shown unaltered, at least 40px tall, with clear space. */
+.store-badge { display:inline-block; line-height:0; border-radius:8px; }
+.store-badge img { display:block; width:144px; height:48px; }
+.store-badge:focus-visible { outline:2px solid var(--green); outline-offset:4px; }
+.closing .store-badge { margin-block:8px; }
+.closing .legal { margin-top:12px; opacity:.8; }
